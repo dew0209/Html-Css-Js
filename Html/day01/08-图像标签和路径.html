@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>图像和路径标签</title>
+    </head>
+    <body>
+        <!--
+
+            img用于定义HTML页面中的图像
+                alt：替换文本 图像显示不出来的时候用文字替换
+                title：提示文本，鼠标放上面，进行提示
+                width：宽度 只要设置了其中一个，另一个就会等比例缩放
+                height：高度
+                border：给图像设定边框的粗细
+            1.图像标签可以拥有多个属性，必须写在标签名的后面
+            2.属性之间不分先后顺序，标签名与属性，属性与属性之间均已空格隔开
+            3.属性采取键值对的格式，即key="value"的格式，属性="属性值"
+
+            相对路径：以引用文件所在的位置为参考基础，而建立出的目录路径
+                不写：当前路径   b
+                 /：当前路径下  a/b
+                ../：上一级路径 ../b
+                ./：当前路径下  ./b
+            绝对路径：是指目录下的绝对位置，直接到达目标的位置，通常是从盘符开始的路径  也包括网络上的 http://xxx.xxx/xxx.jpg
+        -->
+        <h4>图像标签的使用：</h4>
+        <img src="./images/img.jpg" alt="我是pink老师" />
+        <img src="./images/img1.jpg" alt="我是pink老师" />
+        <img src="./images/img.jpg" alt="我是pink老师" title="我是pink老师思密达" height="100" border="15" />
+    </body>
+</html>
