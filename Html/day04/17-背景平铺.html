@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景平铺</title>
+    <style type="text/css">
+        /*
+            background-repeat
+            设置平铺方式
+            no-repeat:不平铺
+            repeat:平铺
+            repeat-x:背景图像在横向上平铺
+            repeat-y:背景图在纵向上平铺
+        */
+        div {
+            height: 300px;
+            width: 300px;
+            background-image: url("images/logo.png");/* 默认是noe 代表没有 */
+            background-repeat: no-repeat;
+            background-color: pink;/* 和背景图片可以同时存在 背景图片会压住背景颜色  背景颜色是底层 */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

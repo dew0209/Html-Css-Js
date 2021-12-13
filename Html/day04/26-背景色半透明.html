@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景色半透明</title>
+    <style type="text/css">
+        /*
+            盒子半透明
+            盒子里面的内容不会受影响
+            IE9+才支持
+        */
+        div {
+            width: 300px;
+            height: 200px;
+            background: rgba(0,0,0,0.3);/* 最后一个参数是透明度 越大越不透明 越小越透明  在开发中可以把0去掉，直接写rgba(0,0,0,.3)  最后一个参数的取值范围为0~1之间 */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
