@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算符</title>
+    <script type="text/javascript">
+        /*
+        * &&
+        * ||
+        * !
+        * */
+        //1.&&
+        console.log(3 > 5 && 3 > 2);//false
+        console.log(3 < 5 && 3 > 2);//true
+        //2.||
+        console.log(3 > 5 || 3 > 2);//true
+        console.log(3 > 5 || 3 < 2);//false;
+
+        console.log(!true);//false
+        console.log(!false);//true
+
+        console.log(123 && 456);//左边为假，直接返回左值即可，左边为真，直接返回右值  短路         ||  同样考虑即可
+
+        console.log(0 && 1 + 2 && 456 * 56789);//0  && 后面直接被无视
+
+
+        var num = 0;
+        console.log(123 || num++);//123
+        console.log(num);//0
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

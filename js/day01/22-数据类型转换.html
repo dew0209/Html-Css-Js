@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型转换</title>
+    <script type="text/javascript">
+        /*
+        * 把一种数据类型的变量转换成另一种数据类型
+        *
+        * 1.把数字型转换成字符串型  变量.toString()  利用String(变量)  利用+拼接字符串的方法实现转换效果
+        * 2.转换成数字型          parseInt(变量)   parseFloat(变量)  Number(变量)  利用算术运算(- * /)
+        * */
+        //1.把数字型转换成字符串型
+        var num = 10;
+        var str = num.toString();
+        console.log(str);
+        console.log(String(num));
+        console.log(num + "");
+        //2.转换为数字型
+        var age = prompt('请输入您的年龄');
+        console.log(parseInt(age));
+        console.log(parseInt('12.3'));//取整的  截断   12
+        console.log(parseInt('12abc'));//取整的  截断  12
+        console.log(parseInt('12px'));//取整的  截断  12
+        console.log(parseInt('rem12px'));//取整的  截断  NaN
+        console.log(parseFloat('12.3'));//12.3
+        console.log(parseFloat('3.14aaa'));//3.14
+        console.log(parseFloat('rem3.14aaa'));//NaN
+
+        console.log(Number('12.3'));//12.3
+        console.log(Number('12'));//12
+
+        console.log('12' - 0);//12
+        console.log('123' - '120');//3
+
+        //转boolean  空 否定的值会被转为false  '' 0 NaN null undefined  其余为true
+        console.log(Boolean(0));
+        console.log(Boolean(1));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
