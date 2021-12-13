@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素显示模式的抓换</title>
+    <style type="text/css">
+        /*
+            元素显示模式的转换
+
+        */
+        a {
+            display: block;/* 将其转换为块级元素 */
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        div {
+            display: inline;/* 将其转换为行内元素 */
+            background-color: yellow;
+        }
+
+        span {
+            display: inline-block;/* 将其转换为行内块元素 */
+            background-color: skyblue;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#">点我</a>
+    <a href="#">点我</a>
+    <div>我是块级元素</div>
+    <div>我是块级元素</div>
+    <span>span</span>
+    <span>span</span>
+</body>
+</html>

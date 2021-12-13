@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css的引入方式</title>
+    <style type="text/css">
+        /*
+            1.行内(内嵌)
+            2.内部(嵌入)
+            3.链接
+        */
+        /* 内部 */
+        div {
+            color: deeppink;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/a.css" /><!-- rel="stylesheet"必须要写 -->
+</head>
+<body>
+    <div>内部样式表</div>
+
+    <p style="color: red; font-size: 20px">行内样式表</p>
+
+    <p class="linked1">外部样式表</p>
+</body>
+</html>

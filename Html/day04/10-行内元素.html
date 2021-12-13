@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行内元素</title>
+    <style type="text/css">
+        /*
+            1、相邻行内元素在一行上，一行可以显示多个
+            2.宽，高直接设置是无效的
+            3.默认宽度就是它本身内容的宽度
+            4.行内元素只能容纳文本或其他行内元素
+            链接里面不能在放链接
+            特殊情况a里面可以放块级元素，但是给a转换一下块级模式最安全
+        */
+
+        /* 行内元素不允许放块级元素 */
+        span:first-child {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <span>品如的衣服+++++++</span>
+    <span>品如的衣服</span>
+    <span>品如的衣服</span>
+</body>
+</html>

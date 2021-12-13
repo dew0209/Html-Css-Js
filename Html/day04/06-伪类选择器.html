@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+    <style type="text/css">
+        /*
+            用于向某些选择器添加特殊的效果，比如给链接添加特殊效果 或 选择第一个 ，第n个
+            :hover
+            :first-child
+        */
+
+        /*
+            链接伪类
+                a:link      选择所有未被访问的链接
+                a:visited   选择所有已被访问的链接
+                a:hover     选择鼠标指针位于其上的链接
+                a:active    选择活动链接(鼠标按下未弹起的链接)
+            注意事项：按照顺序声明  a:link  a:visited  a:hover  a:active的顺序
+        */
+        a:link {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        a:hover {
+            color: yellow;
+        }
+
+        a:active {
+            color: green;
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="#">小猪佩奇</a>
+</body>
+</html>

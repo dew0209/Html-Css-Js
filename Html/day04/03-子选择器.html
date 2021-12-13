@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子选择器</title>
+    <style type="text/css">
+        /* 选择亲儿子 孙子就不用选了 亲儿子选择器 */
+        div>a {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#">我是儿子</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+</body>
+</html>
