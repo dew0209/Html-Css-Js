@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优先级</title>
+    <style type="text/css">
+
+        /*
+            选择器相同，则执行层叠性
+            选择器不同，则根据选择器权重执行
+
+            权重：
+                选择器             选择器权重
+                继承或者*           0 0 0 0
+                元素选择器          0 0 0 1
+                类选择器 伪类选择器   0 0 1 0
+                id选择器            0 1 0 0
+                行内样式style=“”    1 0 0 0
+                !important        无穷大
+
+            等级判断从左到右依次进行，数值相同，则判断下一位
+
+        */
+
+        #id1 {
+            color: #333333;
+        }
+
+        div {
+            color: pink!important;
+        }
+        .test {
+            color: red;
+        }
+        /* 注意 */
+        /* 所以以后我们看标签到底执行那个样式，就先看这个标签有没有直接被选出来 */
+        .test01 {
+            color: red;
+        }
+        p {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="test" id="id1" style="color: skyblue">你笑起来真好看</div>
+    <div class="test01">
+        <p>嘿嘿嘿</p>
+        <a href="#">点我</a><!-- 这个颜色不会是红色，浏览器定制了一个默认的蓝色有下划线的样式给a标签 -->
+    </div>
+</body>
+</html>

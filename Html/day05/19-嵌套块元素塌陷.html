@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>嵌套块元素塌陷</title>
+    <style type="text/css">
+        /*
+            对于两个嵌套关系（父子关系）的块元素，父元素有上外边距同时子元素也有上外边距，此时父元素会塌陷较大的外边距值
+            下面展示了三种方案
+            还有其他方法，比如浮动，固定，绝对定位的盒子不会有塌陷问题，以后会学到
+        */
+        .father {
+            margin-top: 20px;
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+            /*border: 1px solid transparent;!* 解决方案一 *!*/
+            /*padding: 1px;!*解决方案二*!*/
+            overflow: hidden;/* 解决方案三 */
+        }
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

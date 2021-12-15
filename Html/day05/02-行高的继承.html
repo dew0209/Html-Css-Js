@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行高的继承</title>
+    <style type="text/css">
+        body {
+            color: pink;
+            font: 12px/1.5 'Microsoft YaHei';/* 1.5 是font-size的1.5倍  这样写法的最大优势就是里面子元素可以根据自己文字大小自动调整行高 */
+        }
+        div {
+            font-size: 14px;/* 1.5倍继承过来了 */
+        }
+        p {
+            font-size: 16px;/* 1.5倍继承过来了 */
+        }
+
+    </style>
+</head>
+<body>
+    <div>粉红色的回忆</div>
+    <p>粉红色的回忆</p>
+    <ul>
+        <li>我没有指定文字的大小</li><!-- 12px/1.5 -->
+    </ul>
+</body>
+</html>

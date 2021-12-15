@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除内外边距</title>
+    <style type="text/css">
+        /*
+            会有默认的内外边距
+        */
+        /* 清除 */
+        /* 这句话也是我们写网页的第一行代码 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /*
+            行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距，但是转换为块级和行内块元素就可以了
+        */
+        span {
+            background-color: pink;
+            margin: 20px;/* 上下没有生效 */
+        }
+
+    </style>
+</head>
+<body>
+    123
+    <ul>
+        <li>abcd</li>
+    </ul>
+    <span>行内元素尽量只设置左右的内外边距</span>
+</body>
+</html>

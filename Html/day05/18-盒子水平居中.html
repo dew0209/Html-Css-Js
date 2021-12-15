@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子水平居中</title>
+    <style type="text/css">
+        /*
+            1.必须有宽度
+            2.是块级
+        */
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        /*
+            行内元素或者行内块元素水平居中给其父元素添加text-align:center即可
+        */
+        .one {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="noe">
+        <p>里面的元素</p>
+    </div>
+</body>
+</html>
