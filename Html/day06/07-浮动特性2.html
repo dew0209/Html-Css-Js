@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动特性</title>
+    <style type="text/css">
+        /*
+            如果多个盒子都设置了浮动，则它们会按照属性值一行内显示并且顶端对齐排列
+            注意：浮动的元素是互相贴靠在一起的（不会有间隙），如果父级宽度装不下这些浮动的盒子，则多出的盒子会另起一行对齐
+        */
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+
+        .two {
+            height: 290px;
+            background-color: purple;
+        }
+
+        .four {
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <div class="two">2</div>
+    <div>3</div>
+    <div class="four">4</div>
+</body>
+</html>

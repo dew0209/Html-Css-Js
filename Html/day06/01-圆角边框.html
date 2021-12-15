@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圆角边框</title>
+    <style type="text/css">
+        /*
+            css3新增了圆角边框样式，这样我们的盒子就可以变圆角了
+            border-radius属性用于设置元素的外边框圆角
+
+            常用的：
+                1.如果是正方形，想要设置为一个圆，把数值修改为高度或者宽度的一般即可，或者直接写为50%
+                2.如果是个矩形，设置为高度的一半就可以
+                3.该属性可以跟四个值，左上角，右上角，右下角，左下角
+        */
+        div {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;/* 当height == width 并且 border-radius等于其一半，就是一个园了  除了用px 也可以% */
+            background-color: pink;
+        }
+
+        .one {
+            height: 100px;
+            width: 300px;
+            border-radius: 50px;
+            background-color: pink;
+        }
+        .two {
+            height: 100px;
+            width: 300px;
+            border-radius: 10px 20px 30px 40px;
+            background-color: pink;
+        }
+        .three {
+            height: 100px;
+            width: 300px;
+            border-radius: 10px 20px;
+            /*border-top-left-radius: 10px;*/
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动的三种方式</title>
+    <style type="text/css">
+        /*
+            标准流：
+                块级元素会独占一行，从上向下顺序排列
+                    常用元素：div hr p h1~h6 ol dl form table
+                行内元素会按照顺序，从左到右顺序排列，碰到父元素边缘则自动换行
+                    常用元素：span a i em
+                以上都是标准流，我们前面学习的就是标准流，标准流是最基本的布局方式
+            在实际开发中，一个页面基本包含了这三种布局方式
+            浮动可以改变标签的默认排列方式
+            网页布局第一准则：多个块级元素纵向排列找标准流，多个块级元素横向排列找浮动
+
+            什么是浮动：浮动用于创建浮动框，将其移动到另一边，直到左边缘或右边缘触及包含块或另一个浮动框的边缘
+            语法：
+                选择器{float: 属性值;}
+                none：不浮动
+                left：左浮动
+                right：有浮动
+        */
+        div {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background-color: pink;
+            text-align: center;
+        }
+        .one {
+            float: left;
+        }
+        .two {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">青龙大人</div>
+    <div class="two">白虎大人</div>
+</body>
+</html>

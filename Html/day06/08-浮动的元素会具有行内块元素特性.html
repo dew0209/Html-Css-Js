@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动的元素会具有行内块元素的特性</title>
+    <style type="text/css">
+        /*
+            浮动的元素会具有行内块元素的特性
+        */
+        span,div {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            float: left;/* 加了浮动，高度和宽度就显示出来了 */
+        }
+        p {
+            height: 200px;
+            background-color: purple;
+            float: right;
+            /*
+              如果行内元素有了浮动，则不需要转换行内块元素就可以直接给高度和宽度
+              1、如果块级元素没有设置高度，默认宽度和父级一样宽，但是添加浮动后，它的大小根据内容来决定
+              2.浮动的盒子中间是没有间隙的，是紧挨着一起的
+              3.行内元素同理
+            */
+        }
+    </style>
+</head>
+<body>
+    <span>1</span>
+    <span>2</span>
+    <div>div</div>
+    <p>p</p>
+</body>
+</html>
