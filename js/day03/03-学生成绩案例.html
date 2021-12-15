@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩案例</title>
+    <script type="text/javascript">
+        var count = prompt('请输入班级总人数');
+        var sum = 0;
+        for(var i = 1;i <= count;i++){
+            sum += parseFloat(prompt('请输入第' + i + '个学生的成绩'));
+        }
+        alert('总成绩：' + sum)
+        alert('平均成绩' + sum / count);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

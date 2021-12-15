@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch语句</title>
+    <script type="text/javascript">
+        /*
+        * switch(表达式){
+        *   case x:
+        *       语句;
+        *       break;
+        *   case x1:
+        *       语句;
+        *       break;
+        *   ...
+        *   default:
+        *       语句;
+        *       break;
+        * }
+        *
+        * 1.表达式经常写成变量
+        * 2.表达式和case里面判断的是全等(===)
+        * 3.有穿透机制
+        * */
+        switch (2) {
+            case 1:
+                console.log('这是1');
+                break;
+            case 2:
+                console.log('这是2');
+                break;
+            case 3:
+                console.log('这是3');
+                break;
+            default:
+                console.log('无匹配');
+                break;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

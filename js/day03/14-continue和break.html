@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>continue和break</title>
+    <script type="text/javascript">
+        /*
+        * continue 跳出本次循环，继续下一次
+        * break 结束当前循环[多重下结束最靠近break的循环]
+        * */
+        for(var i = 1;i <= 5;i++){
+            if(i == 3)continue;
+            console.log(i);
+        }
+        console.log('分割线');
+        for(var i = 1;i <= 5;i++){
+            if(i == 3)break;
+            console.log(i);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
