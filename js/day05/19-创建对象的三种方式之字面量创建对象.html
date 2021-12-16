@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+    <script type="text/javascript">
+        /*
+        * 什么是对象：是一组无序的相关属性和方法的集合
+        * 创建对象的方式：
+        *   1.利用对象字面量创建对象{}
+        *
+        *
+        *  使用对象：
+        *       对象名.属性名
+        *       对象名['属性名']
+        *       对象名.方法
+        * */
+        //var obj = {};//创建一个空的对象
+        //1.利用对象字面量创建对象{}
+        /*
+        *  1.里面的属性或者方法我们采取键值对的形式 键 属性名: 值 属性值
+        *  2.多个属性或者方法之间用,隔开
+        *  3.方法冒号后面跟的是一个匿名函数
+        * */
+        var obj = {
+            uname: '张三丰',
+            age: 18,
+            sex: '男',
+            sayHi: function () {
+                console.log('hi~~');
+            }
+        }
+        console.log(obj.age);
+        console.log(obj['age']);
+        obj.sayHi();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

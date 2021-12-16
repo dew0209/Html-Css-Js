@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预解析案例4</title>
+    <script type="text/javascript">
+        f1();
+        console.log(c);// 9
+        console.log(b);// 9
+        console.log(a);//not defined
+        function f1() {
+            var a = b = c = 9;//相当于 var a = 9;b = 9;c = 9;没有var，当成全局变量来看
+            console.log(a);// 9
+            console.log(b);// 9
+            console.log(c);// 9
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数是可以相互调用的</title>
+    <script type="text/javascript">
+        function fn1() {
+            console.log(11);
+            fn2();
+        }
+        fn1();
+        function fn2(){
+            console.log(22);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

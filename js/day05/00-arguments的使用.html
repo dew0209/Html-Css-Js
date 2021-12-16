@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arguments的使用</title>
+    <script type="text/javascript">
+        /*
+        * 形参个数不确定的时候
+        *   function f(){
+        *       console.log(arguments);
+        *   }
+        *
+        *   只有函数才有arguments
+        * */
+        function f() {
+            console.log(arguments);/* 伪数组，不是真正的数组 1.具有数组的length属性，2.按照索引的方式进行存储 3.它没有真正数组的一些方法 */
+            console.log(arguments.length);
+            //我们可以按照数组的方式遍历数组
+            for(var i = 0;i < arguments.length;i++){
+                console.log(arguments[i]);
+            }
+        }
+        f(1,2,3);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

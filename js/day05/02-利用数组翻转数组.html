@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利用数组翻转数组</title>
+    <script type="text/javascript">
+        //利用函数翻转任意数组
+        function reverse(arr) {
+            var newArr = [];
+            for(var i = arr.length - 1;i >= 0;i--){
+                newArr[newArr.length] = arr[i];
+            }
+            return newArr;
+        }
+        var arr1 = reverse([1,4,3,5,1]);
+        console.log(arr1);
+        var arr2 = reverse(['red','pink','blue']);
+        console.log(arr2);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

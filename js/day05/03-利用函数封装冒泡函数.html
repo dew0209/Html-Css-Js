@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利用函数封装冒泡函数</title>
+    <script type="text/javascript">
+        function sort(arr) {
+            for(var i = 0;i < arr.length - 1;i++){
+                for(var j = 0;j < arr.length - 1 - i;j++){
+                    if(arr[j] > arr[j + 1]){
+                        var tmp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = tmp;
+                    }
+                }
+            }
+            return arr;
+        }
+        var arr1 = [1,5,4,6];
+        var arr = sort(arr1);
+        console.log(arr1);
+        console.log(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

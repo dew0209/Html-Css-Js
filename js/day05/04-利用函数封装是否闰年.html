@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>是否闰年</title>
+    <script type="text/javascript">
+        function isRunYear(year) {
+            var flag = false;
+            if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+                flag = true;
+            }
+            return flag;
+        }
+
+        console.log(isRunYear(2000));
+        console.log(isRunYear(1999));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
