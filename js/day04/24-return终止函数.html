@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function getSum(num1,num2) {
+            return num1 + num2;
+            alert('我是不会被执行的哦');// 不会被执行终止函数
+        }
+        console.log(getSum(1,2));
+        function fn(num1,num2) {
+            return num1,num2;/* 返回的结果是最后一个值 如果需要返回多个值，可以用数组 */
+        }
+
+        console.log(fn(1,2));
+
+        /* 求任意两个数的 加减乘除的结果 */
+        function getResult(num1,num2) {
+            return [num2 + num1,num1 - num2,num1 * num2,num1 / num2];
+        }
+        var re = getResult(1,2);
+        console.log(re);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

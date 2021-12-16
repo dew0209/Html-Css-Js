@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冒泡排序</title>
+    <script type="text/javascript">
+        var arr = [1,2,5,2,1];
+        for(var i = 0;i < arr.length - 1;i++){
+            for(var j = 0;j < arr.length - 1 - i;j++){
+                if(arr[j] > arr[j + 1]){
+                    var tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
