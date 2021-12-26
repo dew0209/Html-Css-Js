@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>封装自己的数学对象</title>
+    <script type="text/javascript">
+        var myMath = {
+            PI: 3.1415926,
+            max: function () {
+                var maxVal = arguments[0];
+                for(var i = 1;i < arguments.length;i++){
+                    if(maxVal < arguments[i])maxVal = arguments[i];
+                }
+                return maxVal;
+            }
+        }
+        console.log(myMath.max(1,2,3,-99,77,0,99));
+        console.log(myMath.PI);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

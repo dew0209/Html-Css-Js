@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>格式化日期</title>
+    <script type="text/javascript">
+        var date = new Date();
+        console.log(date.getFullYear());//返回当前日期的年
+        console.log(date.getMonth());//返回当前日期的月  比实际月份小1
+        console.log(date.getDate());//返回几号
+        console.log(date.getDay());//返回星期几  要注意：周一是1   周日是0
+
+        //我们写一个2019年5月1日 星期三
+
+        var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var dates = date.getDate();
+        var day = date.getDay();
+        console.log('今天是：' + year + '年' + month + '月' + dates + '日，' + arr[day]);
+
+        //时分秒
+        var hours = date.getHours();
+        console.log(hours);//几点了
+        console.log(date.getMinutes());//分钟
+        console.log(date.getSeconds());//秒数
+
+        //封装成函数
+        function getTime() {
+            var time = new Date();
+            var h = time.getHours();
+            h = h < 10 ? '0' + h : h;
+            var m = time.getMinutes();
+            m = m < 10 ? '0' + m : m;
+            var s = time.getSeconds();
+            s = s < 10 ? '0' + s : s;
+
+            return h + ':' + m + ':' + s;
+        }
+
+        console.log(getTime());
+
+        /* 获得毫秒数  距离1970年过了多少毫秒数  valueOf或者getTime都可以 */
+        console.log(date.valueOf());
+        console.log(date.getTime());
+        console.log(+new Date());// +new Date()就是返回毫秒数
+        console.log(Date.now());//h5新增
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

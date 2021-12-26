@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>random</title>
+    <script type="text/javascript">
+        /*
+        * Math.random()  返回一个小数 0 <= 小数 < 1
+        * */
+        console.log(Math.random());
+        //两个数之间的随机整数，包含这两个数
+        function getRandom(min,max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);// 0 <= x < 1   0 <= x < 10   1 <= x < 11  取整 1 <= x <= 10
+        }
+        console.log(getRandom(1,10));
+        var arr = ['张三丰','张三','李四'];
+        console.log(arr[getRandom(0,arr.length - 1)])
+    </script>
+</head>
+<body>
+
+</body>
+</html>
