@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件基础</title>
+</head>
+<body>
+    <button id="btn">唐伯虎</button>
+    <script type="text/javascript">
+        //触发，响应机制
+        //点击一个按钮，弹出对话框  组成  事件源  事件类型  事件处理程序 我们也称为事件三要素
+        //事件源：事件被触发的对象   谁   按钮
+        var ele = document.getElementById('btn');
+        //如何触发 什么事件
+        //事件处理机制 通过一个函数完成
+        ele.onclick = function () {
+            alert('点秋香');
+        }
+    </script>
+</body>
+</html>
