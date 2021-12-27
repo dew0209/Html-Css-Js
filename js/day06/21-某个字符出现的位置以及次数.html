@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var str = '1111111111dwqdqwdqib000000000oooo1o1o1o1o1o1';
+        var sum = 0;
+        var index = str.indexOf('o');
+        while(index != -1){
+            sum++;
+            index = str.indexOf('o',index + 1);
+        }
+        console.log(sum);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

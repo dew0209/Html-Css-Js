@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组排序</title>
+    <script type="text/javascript">
+        //数组排序
+        //1.翻转数组
+        var arr = [1,2,7,77,3,55];
+        arr.reverse();
+        console.log(arr);
+        console.log(arr.sort(function (a,b) {
+            return a - b;//自己的规则，没写就是默认的，默认既不是升序也不是降序  return a-b 升序 b-a降序
+        }));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

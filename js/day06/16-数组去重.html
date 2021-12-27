@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组去重</title>
+    <script type="text/javascript">
+        var arr = ['a','c','1',1,1,1,1,2,4];
+        var newArr = [];
+        for(var i = 0;i < arr.length;i++){
+            var index = newArr.indexOf(arr[i]);
+            if (index == -1){
+                newArr.push(arr[i]);
+            }
+        }
+        console.log(newArr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

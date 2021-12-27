@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时案例</title>
+    <script type="text/javascript">
+        /*
+        * 输入的时间减去当前时间
+        * 利用时间戳减去即可   即毫秒数相减
+        * 再将剩余的毫秒数转换为相应的格式即可
+        * */
+        function countDown(time) {
+            var nowTime = +new Date();
+            var inputTime = +new Date(time);
+            var times = (inputTime - nowTime) / 1000;//获得秒数
+
+            var d = parseInt(times / 60 / 60 /24);//天
+            var h = parseInt(times / 60 / 60 % 24);//小时
+            var m = parseInt(times / 60 % 60);//分
+            var s = parseInt(times % 60);//秒
+
+            return d + '天' + h + '时' + m + '分' + s + '秒';
+        }
+
+        console.log(countDown('2021-12-27 18:00:00'));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

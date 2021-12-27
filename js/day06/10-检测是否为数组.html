@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检测是否为数组</title>
+    <script type="text/javascript">
+        // instanceof
+        var arr = [1,2,3];
+        console.log(arr instanceof Array);
+        function reverse(arr) {
+            if(arr instanceof Array){
+                var newArr = [];
+                for(var i = arr.length - 1;i >= 0;i--){
+                    newArr[newArr.length] = arr[i];
+                }
+                return newArr;
+            }
+            return '不是一个数组';
+        }
+
+        console.log(reverse(1,2,3));
+        console.log(reverse([1,2,3]));
+
+        //Array.isArray();
+        console.log(Array.isArray(arr));
+        console.log(Array.isArray(1));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
