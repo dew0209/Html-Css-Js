@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用元素的属性操作</title>
+</head>
+<body>
+    <!--
+        1.innerText innerHtml 改变元素内容
+        2.src href
+        3.id alt title
+    -->
+    <button id="up">up</button>
+    <button id="down">down</button>
+    <br>
+    <img src="images/up.jpg" alt="" title="up" />
+    <script>
+        //修改元素属性 src
+        //1.获取元素
+        var up = document.getElementById('up');
+        var down = document.getElementById('down');
+        var img = document.querySelector('img');
+        up.onclick = function () {
+            img.src = 'images/up.jpg';
+            img.title = 'up';
+        }
+        down.onclick = function () {
+            img.src = 'images/down.jpg';
+            img.title = 'down';
+        }
+    </script>
+</body>
+</html>

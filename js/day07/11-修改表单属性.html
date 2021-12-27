@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改表单属性</title>
+
+</head>
+<body>
+    <button>按钮</button>
+    <input type="text" value="请输入内容">
+    <script type="text/javascript">
+        /*
+        * 利用DOM可以操作如下表单元素的属性
+        * type
+        * value
+        * checked
+        * selected
+        * disabled
+        * */
+        var button = document.querySelector('button');
+        var input = document.querySelector('input');
+        button.onclick = function () {
+            //input.innerHTML = '点击了';//这是不会起作用的，innerHTML只适用于普通盒子
+            input.value = '被点击了';
+            // button.disabled = true;//禁用
+            this.disabled = true;//this指的是事件函数的调用者 即 button
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>区别</title>
+</head>
+<body>
+    <div></div>
+    <p></p>
+    <script>
+        var div = document.querySelector('div');
+        //不识别html标签
+        div.innerText = '<strong>今天是：2019</strong>';
+        //识别html标签
+        var p = document.querySelector('p');
+        p.innerHTML = '<strong>今天是\n：2019</strong>';
+        alert(p.innerHTML);//同时保留空格和换行
+        alert(p.innerText);//不保留空格和换行
+    </script>
+</body>
+</html>

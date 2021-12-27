@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示隐藏框的文本内容</title>
+    <style type="text/css">
+        input {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" value="手机">
+    <script type="text/javascript">
+        var text = document.querySelector('input');
+        text.onfocus = function () {
+            if(text.value == '手机')
+                text.value = '';
+            this.style.color = '#333';
+        }
+        text.onblur = function () {
+            if (text.value == '')
+                text.value = '手机';
+            this.style.color = '#999';
+        }
+    </script>
+</body>
+</html>

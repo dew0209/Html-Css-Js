@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>精灵图</title>
+    <style type="text/css">
+
+        /*
+            未完成  精灵图没学，后期补上
+        */
+
+        .box {
+            width: 250px;
+            margin: 100px auto;
+        }
+        .box li{
+            float: left;
+            width: 24px;
+            height: 24px;
+            background-color: pink;
+            margin: 15px;
+            background: url(images/up.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        var lis = document.querySelectorAll('li');
+        for(var i = 0;i < lis.length;i++){
+            lis[i].style.backgroundPosition = '0 ' + i * -44 + 'px';
+        }
+    </script>
+</body>
+</html>
