@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取自定义属性值</title>
+
+</head>
+<body>
+    <div id="demo" index="1"></div>
+    <script type="text/javascript">
+        var div = document.querySelector('div');
+        //获取元素的属性值
+        console.log(div.id);
+        console.log(div.getAttribute('id'));//可以获取自定义属性
+        console.log(div.index);//不行  undefined
+        console.log(div.getAttribute('index'));//可以  1
+
+    </script>
+</body>
+</html>

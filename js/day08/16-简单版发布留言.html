@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单版发布留言</title>
+</head>
+<body>
+    <textarea name="" id="">123</textarea>
+    <button>发布</button>
+    <ul>
+        <li>123</li>
+    </ul>
+    <script>
+        var btn = document.querySelector('button');
+        var text = document.querySelector('textarea');
+        var ul = document.querySelector('ul');
+        btn.onclick = function () {
+            if (text.value == ''){
+                return false;
+            }
+            var li = document.createElement('li');
+            li.innerHTML = text.value;
+            ul.insertBefore(li,ul.children[0]);
+        }
+    </script>
+</body>
+</html>

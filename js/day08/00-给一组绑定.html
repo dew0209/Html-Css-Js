@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>给一组绑定</title>
+</head>
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <script type="text/javascript">
+        // btns得到的是伪数组
+        var btns = document.getElementsByTagName('button');
+        for(var i = 0;i < btns.length;i++){
+            btns[i].onclick = function () {
+                for(var j = 0;j < btns.length;j++){
+                    btns[j].style.backgroundColor = '';
+                }
+                this.style.backgroundColor = 'pink';
+            }
+        }
+    </script>
+</body>
+</html>

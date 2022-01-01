@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取第一个子元素和最后一个子元素</title>
+</head>
+<body>
+    <ol>
+        <li>我是li1</li>
+        <li>我是li2</li>
+        <li>我是li3</li>
+        <li>我是li4</li>
+    </ol>
+    <script type="text/javascript">
+        var ol = document.querySelector('ol');
+        //这两个获取到的都是文本节点 因为这个li的缘故
+        console.log(ol.firstChild);
+        console.log(ol.lastChild);
+        //获取子元素节点
+        console.log(ol.firstElementChild);
+        console.log(ol.lastElementChild);
+        //实际开发的写法
+        var chs = ol.children;
+        console.log(chs[0]);
+        console.log(chs[chs.length - 1]);
+    </script>
+</body>
+</html>

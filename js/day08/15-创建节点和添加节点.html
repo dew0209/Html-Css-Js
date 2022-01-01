@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建节点和添加节点</title>
+
+</head>
+<body>
+    <ul>
+        <li>123</li>
+    </ul>
+    <script type="text/javascript">
+        var ul = document.querySelector('ul');
+        var li = document.createElement('li');
+        var lili = document.createElement('li');
+        ul.appendChild(li);
+        ul.insertBefore(lili,ul.children[0]);
+    </script>
+</body>
+</html>

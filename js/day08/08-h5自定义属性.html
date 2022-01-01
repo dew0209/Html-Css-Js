@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>h5自定义属性</title>
+
+</head>
+<body>
+    <div getTime="20" data-index="2" data-list-name="aaa"></div>
+    <script type="text/javascript">
+        var div = document.querySelector('div');
+        console.log(div.getAttribute('getTime'));
+        /*
+        * H5规定自定义属性data-开头做为属性名并且赋值
+        * */
+        div.setAttribute('data-time',20);
+        console.log(div.getAttribute('data-time'));
+        console.log(div.dataset.index);//h5新增的  div.dataset是一个集合，里面存放了以所有data开头的自定义属性
+        console.log(div.dataset['index']);
+        console.log(div.dataset.listName);
+    </script>
+</body>
+</html>

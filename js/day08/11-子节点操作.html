@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+
+    <div class="box">
+        <span class="erweima"></span>
+    </div>
+    <script type="text/javascript">
+        var ul = document.querySelector('ul');
+        var lis = ul.childNodes;
+        console.log(lis);//包含元素节点，文本节点  nodeType为1是元素节点
+
+        console.log(ul.children);//获取子元素节点  不包含文本节点
+
+    </script>
+</body>
+</html>

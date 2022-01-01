@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点操作</title>
+</head>
+<body>
+
+    <div>我是div</div>
+    <span>我是span</span>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+
+    <div class="box">
+        <span class="erweima"></span>
+    </div>
+
+
+    <script type="text/javascript">
+        //1.利用DOM提供的方法获取元素   以前的做法
+
+        //2.利用节点层级关系获取元素    利用父子兄弟关系获取节点   注意：空格也是节点   文本节点
+        var box = document.querySelector('.box');
+        console.dir(box);
+    </script>
+</body>
+</html>
