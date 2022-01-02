@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态生成表格</title>
+    <style type="text/css">
+        table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td,th {
+            border: 1px solid #333;
+        }
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>卫英络</td>
+                <td>JavaScript</td>
+                <td>100</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>卫英络</td>
+                <td>JavaScript</td>
+                <td>100</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>卫英络</td>
+                <td>JavaScript</td>
+                <td>100</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+            <tr>
+                <td>卫英络</td>
+                <td>JavaScript</td>
+                <td>100</td>
+                <td><a href="javascript:;">删除</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript">
+        var datas = [{
+            name: '小明',
+            subject: 'javaScript',
+            score: 100
+        },{
+            name: '小明',
+            subject: 'javaScript',
+            score: 100
+        },{
+            name: '小明',
+            subject: 'javaScript',
+            score: 100
+        },{
+            name: '小明',
+            subject: 'javaScript',
+            score: 100
+        }];
+        var tbody = document.querySelector('tbody');
+        for(var i = 0;i < datas.length;i++){
+            //创建tr行
+            var tr = document.createElement('tr');
+            for(var k in datas[i]){
+                var td = document.createElement('td');
+                td.innerHTML = datas[i][k];
+                tr.appendChild(td);
+            }
+            var tdA = document.createElement('td');
+            var a = document.createElement('a');
+            a.href = "javascript:;";
+            a.innerHTML = '删除';
+            tdA.appendChild(a);
+            tr.appendChild(tdA);
+            tbody.appendChild(tr);
+        }
+
+
+
+        //删除操作
+
+        var as = document.querySelectorAll('a');
+
+        for(var i = 0;i < as.length;i++){
+            as[i].onclick = function () {
+                var tr = this.parentNode.parentNode;
+                tbody.removeChild(tr);
+            }
+        }
+
+
+    </script>
+</body>
+</html>

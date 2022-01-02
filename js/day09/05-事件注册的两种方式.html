@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件注册的两种方式</title>
+</head>
+<body>
+    <button>传统注册方式</button>
+    <button>方法监听注册事件</button>
+    <button>ie9 attachEvent</button>
+    <script type="text/javascript">
+        /*
+        * 传统方式和方法监听注册方式
+        * */
+        var btns = document.querySelectorAll('button');
+        btns[0].onclick = function () {
+            alert('你好啊');
+        }
+        //将上一个覆盖掉了
+        btns[0].onclick = function () {
+            alert('hi');
+        }
+        //btns[1].addEventListener(事件类型,处理函数[,可选参数true/false 默认false 后续在DOM时间流中会学习到]) //事件类型是字符串，不带on
+        btns[1].addEventListener("click", function () {
+            alert('你好啊！！');
+        },false);
+        //不会覆盖
+        btns[1].addEventListener("click", function () {
+            alert('hi！！');
+        },false);
+        btns[2].attachEvent('onclick',function () {
+           alert('hi');//ie9之前支持 并且只有ie可以，谷歌浏览器不支持
+        });
+    </script>
+</body>
+</html>

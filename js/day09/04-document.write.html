@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>点击</button>
+    <p>abc</p>
+    <div class="inner"></div>
+    <div class="create"></div>
+    <script type="text/javascript">
+        //三种创建元素的区别
+        //document.write()  是直接将内容写入页面的内容流，但是文档流执行完毕，则它会导致页面全部重绘
+        var btn = document.querySelector('button');
+        btn.onclick = function(){
+            document.write('<div>123</div>');//页面重绘  和  window.onload = function() {}差不多
+        }
+        //innerHTML创建元素   创建多个元素的时候，可能比较耗时   可以使用数组加快 使用数组加快比createElement更快，拼接则更加耗时
+        var inner = document.querySelector('.inner');
+        inner.innerHTML = '<a href="#">百度</a>';
+        //document.createElement()创建元素
+        var create = document.querySelector('.create');
+        var a = document.createElement('a');
+        a.href = '#';
+        a.innerHTML = '百度';
+        create.appendChild(a);
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复制节点</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script type="text/javascript">
+        var ul = document.querySelector('ul');
+        var lili = ul.children[0].cloneNode(true);//cloneNode()浅拷贝，不复制内容  cloneNode(true)深拷贝，复制内容
+        ul.appendChild(lili);
+    </script>
+</body>
+</html>
