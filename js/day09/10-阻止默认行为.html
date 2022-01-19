@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>123</div>
+    <a href="http://www.baidu.com">百度</a>
+    <form action="http://www.baidu.com">
+        <input type="submit" value="提交" name="sub">
+    </form>
+    <script type="text/javascript">
+        var div = document.querySelector('div');
+        div.addEventListener('click',fn);
+        div.addEventListener('mouseover',fn);
+        div.addEventListener('mouseout',fn);
+        function fn(e) {
+            console.log(e.type);
+        };
+        //阻止默认行为  让链接不跳转 或者让按钮不提交
+        var a = document.querySelector('a');
+        a.addEventListener('click',function (e) {
+            e.preventDefault();//dom 标准写法 非ie678使用  方法
+            e.returnValue;//ie678使用     属性
+            //可以用return false 没有兼容性问题     return false;只限于传统的注册方式，其后代码不执行
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件委托</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script type="text/javascript">
+        /*
+        * 事件委托：不是每个子节点单独设置事件监听器，而是事件监听器设置在其父节点上，然后利用冒泡原理影响设置每个子节点
+        * */
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click',function (e) {
+            e.target.style.backgroundColor = 'pink';
+        });
+    </script>
+</body>
+</html>

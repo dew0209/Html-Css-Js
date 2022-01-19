@@ -24,10 +24,12 @@
         btns[1].addEventListener("click", function () {
             alert('你好啊！！');
         },false);
-        //不会覆盖
+        //1.里面的事件类型是字符串，必定加引号，并且不带on
+        //2.同一个元素，同一个事件可以添加多个侦听器（事件处理程序）
         btns[1].addEventListener("click", function () {
             alert('hi！！');
         },false);
+        //这个是ie9之前支持的，尽量少使用
         btns[2].attachEvent('onclick',function () {
            alert('hi');//ie9之前支持 并且只有ie可以，谷歌浏览器不支持
         });

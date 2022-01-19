@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom事件流</title>
+</head>
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script type="text/javascript">
+        /*
+        * 事件流描述的是从页面中接受事件的顺序。
+        * 比如给一个div注册了点击事件：
+        *   分为三个阶段：
+        *           捕获阶段    Document  html   body
+        *           当前目标阶段      div
+        *           冒泡阶段    body       html     Document
+        * 传统方式只能得到冒泡阶段
+        * addEventListener第三个参数为true--捕获    false（默认）--冒泡
+        * */
+        //捕获  document-->html--->body--->目标
+        // var son = document.querySelector('.son');
+        // son.addEventListener('click',function () {
+        //     alert('son');
+        // },true);
+        // var father = document.querySelector('.father');
+        // father.addEventListener('click',function () {
+        //     alert('father');//这个先
+        // },true);
+        //目标阶段--->body--->html--->document
+        var son = document.querySelector('.son');
+        son.addEventListener('click',function () {
+            alert('son');//这个先
+        });
+        var father = document.querySelector('.father');
+        father.addEventListener('click',function () {
+            alert('father');
+        });
+        //侧重冒泡
+        //有些事件没有冒泡
+        //冒泡有时候会带来麻烦
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>123</div>
+    <ul>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+    </ul>
+    <script type="text/javascript">
+        //target和this是有区别的
+        var div = document.querySelector('div');
+        div.addEventListener('click',function (e) {
+            console.log(e.target);//触发事件对象
+            console.log(this);//绑定事件对象
+        })
+        var ul = document.querySelector('ul');
+        ul.addEventListener('click',function (e) {
+            console.log(this);//ul
+            console.log(e.target);//li  事件冒泡
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阻止冒泡</title>
+    <style type="text/css">
+        .father {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+            son儿子
+        </div>
+    </div>
+    <script type="text/javascript">
+        var son = document.querySelector('.son');
+        son.addEventListener('click',function (e) {
+            alert('son');
+            e.stopPropagation();//阻止冒泡 正常的浏览器
+            e.cancelBubble = true;//低版本ie
+        });
+        var father = document.querySelector('.father');
+        father.addEventListener('click',function () {
+            alert('father');
+        });
+        document.addEventListener('click',function () {
+            alert('document');
+        });
+    </script>
+</body>
+</html>

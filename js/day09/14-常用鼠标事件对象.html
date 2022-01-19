@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        * event对象代表事件的状态
+        * 鼠标事件对象：MouseEvent
+        * 键盘事件对象：KeyboardEvent
+        * */
+        document.addEventListener('click',function (e) {
+            //鼠标在可视区域的x和y   不包括滚动
+            console.log(e.clientX);
+            console.log(e.clientY);
+            //相对于整个文档的x和y
+            console.log(e.pageX);
+            console.log(e.pageY);
+            //相对于电脑屏幕的x和y
+            console.log(e.screenX);
+            console.log(e.screenY);
+        });
+    </script>
+</body>
+</html>
