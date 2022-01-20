@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>点我</button>
+    <script type="text/javascript">
+        var btn = document.querySelector('button');
+        btn.onclick = function () {
+            location.assign("http://www.baidu.com");//可以记录历史 可以后退
+            //location.replace("http://www.baidu.com");//不记录历史  不可以后退
+            //location.reload();//重新加载页面 location.reload(true)强制刷新
+        }
+    </script>
+</body>
+</html>

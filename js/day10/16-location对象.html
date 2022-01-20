@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>点击</button>
+    <script type="text/javascript">
+        /*
+        * 统一资源定位符：是互联网上标准的资源地址。互联网上每个文件都有一个唯一的URL，他包含的信息指出文件的位置以及浏览器应该怎么处理它
+        * protocol://host[:post]/path/[?query]#fragment
+        * href
+        * host
+        * pathname
+        * search
+        * hash
+        *  */
+        var btn = document.querySelector('button');
+        btn.addEventListener('click',function () {
+           location.href = 'http://www.baidu.com';
+        });
+    </script>
+</body>
+</html>
