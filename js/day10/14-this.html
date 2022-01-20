@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+</head>
+<body>
+    <button>按钮</button>
+    <script>
+        console.log(this);//window
+        function f() {
+            console.log(this);//window
+        };
+        f();
+        setTimeout(function () {
+            console.log(this);//window
+        },1000);
+        var o = {
+          sayHi: function () {
+              console.log(this);//o这个对象
+          }
+        };
+        o.sayHi();
+        var btn = document.querySelector('button');
+        btn.onclick = function () {
+            console.log(this);
+        };
+        function Fun() {
+            console.log(this);//fun实例对象
+        }
+        var fun = new Fun();
+    </script>
+</body>
+</html>

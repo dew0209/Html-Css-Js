@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .con {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="search">
+        <div class="con">123</div>
+        <input type="text" placeholder="请输入您的快递单号" class="jd">
+    </div>
+    <script type="text/javascript">
+        var con = document.querySelector('.con');
+        var jd = document.querySelector('.jd');
+        /*注意：keydown和keypress在文本框里面的特点：它们两个事件触发的时候，文字还没有落入文本框中*/
+        jd.addEventListener('keyup',function (e) {
+            if (this.value == ''){
+                con.style.display = 'none';
+            }else {
+                con.style.display = 'block';
+                con.innerHTML = this.value;
+            }
+        });
+        jd.addEventListener('blur',function () {
+            con.style.display = 'none';
+        });
+        jd.addEventListener('focus',function () {
+            if (this.value != null){
+                con.style.display = 'block';
+            }
+        })
+    </script>
+</body>
+</html>

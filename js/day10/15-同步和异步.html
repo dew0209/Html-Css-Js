@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>同步和异步</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        * 同步，异步和java中的概念一样
+        * */
+        //异步的
+        /*setInterval(function () {
+            console.log(111);
+        },1000);
+        console.log(2222);
+        console.log(2222);
+        console.log(2222);*/
+        //222   111 ...
+        /*
+        * 异步任务类型：
+        *   普通事件，如click，resize等
+        *   资源加载，如load，error等
+        *   定时器，包括setInterval，setTimeout
+        *   同步任务--->主线程执行栈
+        *   异步任务--->任务队列（消息队列）
+        *   执行顺序：
+        *       先执行执行栈中的不同任务
+        *       异步任务放入任务队列
+        *       一旦执行栈中的同步任务执行完毕，系统就会按次读取任务队列，然后将其放入执行栈，开始执行。
+        *   异步任务的机制：
+        *       点击事件，点击了就会放入任务队列
+        *       定时器，时间到了就会放入任务队列
+        *       。。。。依次类推
+        *       事件循环
+        * */
+        setInterval(function () {
+            console.log(111);
+        },0);
+        console.log(222);
+    </script>
+</body>
+</html>

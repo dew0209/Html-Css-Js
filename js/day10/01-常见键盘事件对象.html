@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        * keyup和keydown不区分大小写，a和A得到的ascII码值是一样的
+        * */
+        /*document.addEventListener('keyup',function (e) {
+            alert(e.keyCode);
+        });*/
+        /*
+        * keypress区分大小写
+        * */
+        document.addEventListener('keypress',function (e) {
+            alert('press' + e.keyCode);
+        })
+    </script>
+</body>
+</html>

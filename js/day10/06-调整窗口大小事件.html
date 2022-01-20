@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div {
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+        }
+    </style>
+    <script type="text/javascript">
+        window.addEventListener('load',function () {
+            var div = document.querySelector('div');
+            window.addEventListener('resize',function () {
+               if (window.innerWidth < 800){
+                   div.style.display = 'none';
+               }else {
+                   div.style.display = 'block';
+               }
+            })
+        });
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

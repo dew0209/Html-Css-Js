@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text">
+    <script type="text/javascript">
+        var input = document.querySelector('input');
+        document.addEventListener('keyup',function (e) {
+           if(e.keyCode == 83){
+               input.focus();/*当前文本框获得焦点*/
+           }
+        });
+    </script>
+</body>
+</html>

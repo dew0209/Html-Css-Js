@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*按下键盘并松开会触发*/
+        document.onkeyup = function () {
+            console.log('我弹起来了');
+        };
+        document.addEventListener('keydown',function () {
+            console.log('我按下了keydown');
+        });
+        //和上面一个的主要区别是，keypress不识别功能键  ctrl,shift等
+        document.addEventListener('keypress',function (){
+            console.log('我按下了keypress');
+        });
+        //执行顺序keydown-->keypress-->keyup
+    </script>
+</body>
+</html>

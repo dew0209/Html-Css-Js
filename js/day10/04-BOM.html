@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        * 浏览器对象模型，它提供了独立于内容而与浏览器窗口进行交互的对象，其核心对象是window。
+        * BOM由一系列对象组成的。
+        * window对象
+        *   它是js访问浏览器窗口的一个接口
+        *   它是一个全局对象，定义在全局作用域中的变量，函数都会变成window对象的属性和方法
+        * */
+        var num = 10;
+        console.log(num);
+        console.log(window.num);
+        function fn() {
+            console.log(11);
+        }
+        fn();
+        window.fn();
+        console.dir(window);
+    </script>
+</body>
+</html>

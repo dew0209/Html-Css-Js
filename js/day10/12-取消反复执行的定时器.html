@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button class="begin">开启</button>
+    <button class="end">关闭</button>
+    <script type="text/javascript">
+        var begin = document.querySelector('.begin');
+        var end = document.querySelector('.end');
+        var timer = null;
+            begin.addEventListener('click',function () {
+                timer = setInterval(function () {
+                console.log('你好吗');
+            },1000)
+        });
+        end.addEventListener('click',function () {
+            clearInterval(timer);
+        })
+    </script>
+</body>
+</html>
