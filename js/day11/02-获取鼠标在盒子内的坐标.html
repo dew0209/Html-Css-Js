@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div {
+            width: 100px;
+            height: 100px;
+            margin-left: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script type="text/javascript">
+        var box = document.querySelector('.box');
+        box.addEventListener('click',function (e) {
+            console.log(e.pageX);
+            console.log(e.pageY);
+            console.log(box.offsetLeft);
+            console.log(box.offsetTop);
+            var x = e.pageX - this.offsetLeft;
+            var y = e.pageY - this.offsetTop;
+            this.innerHTML = 'x坐标是：' + x + '，y坐标是' + y;
+        });
+    </script>
+</body>
+</html>

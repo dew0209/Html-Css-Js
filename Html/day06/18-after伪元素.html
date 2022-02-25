@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        /*
+            IE6,7专有
+        */
+        .clearfix {
+            *zoom: 1;
+        }
+        .box {
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+        .damao {
+            float: left;
+            width: 200px;
+            height: 150px;
+            background-color: #333333;
+        }
+
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 160px;
+            background-color: red;
+        }
+        .erdaye {
+
+            height: 800px;
+            background-color: black;
+        }
+        /*
+            需要清除浮动
+                after伪元素
+                    .clearfix:after {
+                        content: "";
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                    }
+
+                    .clearfix {
+                        *zoom: 1;
+                    }
+        */
+    </style>
+</head>
+<body>
+<div class="box clearfix">
+    <div class="damao">大毛</div>
+    <div class="ermao">二毛</div>
+</div>
+<div class="erdaye">二大爷</div>
+</body>
+</html>
