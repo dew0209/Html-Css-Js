@@ -1,0 +1,89 @@
+* {
+    margin: 0 auto;
+}
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+ul {
+    padding: 0;
+}
+li {
+
+    list-style: none;
+}
+.header {
+    height: 42px;
+
+    margin: 30px auto;
+}
+.logo {
+    float: left;
+    width: 198px;
+    height: 42px;
+    margin: 0;
+}
+.nav {
+    float: left;
+    margin-left: 30px;
+}
+.nav ul li {
+    float: left;
+    margin: 0 15px;
+}
+a {
+    text-decoration: none;
+}
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    color: #050505;
+}
+.nav ul li a:hover {
+    border-bottom: 1px solid #00a4ff;
+    color: #00a4ff;
+}
+.search {
+    float: left;
+    width: 412px;
+    height: 40px;
+    margin-left: 50px;
+}
+
+.search input {
+    float: left;
+    width: 345px;
+    height: 38px;
+    border: 1px solid  #00a4ff;
+    border-right: 0;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 0;
+}
+.search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    background-color: blue;
+    /* 按钮去掉边框 */
+    border: 0;
+    background: url("images/btn.png");
+    padding: 0;
+}
+
+/*
+    css书写顺序：
+        建议遵循以下顺序
+            布局定位属性：display position float clear visibility overflow (建议display第一个写，毕竟关系到模式)
+            自身属性：width height margin padding border background
+            文本属性：color font text-decoration text-align vertical-align white-space break-word
+            其他属性（css3属性）：content cursor border-radius box-shadow text-shadow background:linear-gradient...
+    页面整体布局思路：
+        1.必须确定页面的版心，我们测量可以得知
+        2.分析页面中的行模块，以及每个行模块中的列模块。
+        3.一行中的列模块经常浮动布局，先确定每个列的大小，之后确定列的位置。
+        4.制作html结构，我们还是遵循，先有结构，后有样式的原则。结构永远重要。
+*/
