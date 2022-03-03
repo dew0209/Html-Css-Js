@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            z-index
+            选择器 {
+                z-index:1;
+            }
+            数值越大，越在上面
+            注意：
+                1.数值可以是正整数，负整数或0，默认是auto，数值越大，盒子越靠上。
+                2.如果属性值相同，则按照书写顺序，后来者居上。
+                3.数字后面不能加单位。
+                4.只有定位的盒子才有z-index属性。
+        */
+        .box {
+            position: absolute;
+            top: 10px;
+            width: 200px;
+            height: 200px;
+        }
+        .xiongda {
+            background-color: red;
+            z-index: 1;
+        }
+        .xionger {
+            background-color: green;
+            left: 50px;
+            top: 50px;
+        }
+        .qiangge {
+            background-color: blue;
+            left: 100px;
+            top: 100px;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box xiongda">熊大</div>
+    <div class="box xionger">熊二</div>
+    <div class="box qiangge">光头强</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+    <style>
+        /*
+            absolute(重要)
+            绝对定位是元素在移动位置的时候，是相对于它祖先元素来说的（拼爹型）。
+            语法：
+                选择器 {
+                    position:absolute;
+                }
+            注意：
+                1.如果没有祖先元素或者祖先元素没有定位，则以浏览器为准定位。
+                2.如果祖先元素有定位（相对，绝对，固定定位），则以最近一级的有定位祖先元素为参考点移动元素。[注意是最近一级，父亲没有，爷爷有也行]
+                3.绝对定位不占有原来的位置（脱标）。
+            子绝父相
+                1.子级绝对定位，不会占有位置，可以放到父盒子里面的任何一个地方，不会影响其他的兄弟盒子。
+                2.父盒子需要加定位限制子盒子在父盒子内显示。
+                3.父盒子布局时，需要占有位置，因此父亲只能是相对定位。
+                示例：看学成在线案例的hot图标的演示
+        */
+        .yeye {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            background-color: hotpink;
+            padding: 10px;
+        }
+        .father {
+            /*position: relative;*/
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+        .son {
+            position: absolute;
+            top:20px;
+            left: 20px;
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+        .er {
+            width: 200px;
+            height: 100px;
+            background-color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <div class="yeye">
+        <div class="father">
+            <div class="son"></div>
+            <div class="er"></div>
+        </div>
+    </div>
+
+</body>
+</html>

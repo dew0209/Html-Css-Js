@@ -222,6 +222,7 @@ body {
     width: 1225px;
 }
 .box-bd ul li {
+    position: relative;
     float: left;
     width: 228px;
     height: 270px;
@@ -235,8 +236,13 @@ body {
     color: #050505;
     font-weight: 400;
 }
-.box ul li img {
+.box ul li > img {
     width: 100%;
+}
+.box ul li em{
+    position: absolute;
+    top: 4px;
+    right: -4px;
 }
 .box-bd .info {
     margin: 0 20px 0 25px;

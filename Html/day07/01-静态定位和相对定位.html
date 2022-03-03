@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>静态定位</title>
+    <!--
+        静态定位是元素默认定位方式，无定位的意思
+        语法：
+            选择器 {
+                position:static;
+            }
+        静态定位按照标准流特性摆放位置，它没有边偏移
+        静态定位在布局时很少用到
+
+
+        相对定位是元素在移动位置的时候，是相对于它原来的位置来说的。（自恋性   以自身为准）
+        语法：
+            选择器 {
+                position:relative;
+            }
+        注意点：
+            1.它是相对于自己原来的位置来移动的（移动位置的时候参照点是自己原来的位置）
+            2.原来在标准流的位置继续占有，后面的盒子仍然以标准流的方式对待它。（不脱标，继续保留原来的位置）
+            因此，相对定位并没有脱标。它典型的应用是给绝对定位当爹的。
+    -->
+    <style>
+        .box1 {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
