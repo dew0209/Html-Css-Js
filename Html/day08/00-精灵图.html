@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>精灵图</title>
+    <style>
+        /*
+            因此，为了有效减少服务器接受和发送请求的次数，提高页面的加载速度，出现了css精灵技术
+            核心原理：将网页中的一些小背景图像整合到一张大图中，这样服务器只需要依次请求就可以了。
+        */
+        .box1 {
+            width: 60px;
+            height: 60px;
+            background-color: pink;
+            margin: 100px auto;
+            background: url("images/sprites.png");
+            background-position: -182px 0;
+        }
+        .box2 {
+            width: 27px;
+            height: 27px;
+            margin: 200px;
+            background: url("images/sprites.png") no-repeat -155px -106px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

@@ -221,6 +221,9 @@ body {
 .box-bd ul {
     width: 1225px;
 }
+.user img {
+    vertical-align: middle;
+}
 .box-bd ul li {
     position: relative;
     float: left;

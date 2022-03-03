@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 这个有兼容性问题 */
+        div {
+            width: 150px;
+            height: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* 弹性伸缩盒子模型显示 */
+            display: -webkit-box;
+            /* 限制在一个块元素显示的文本的行数 */
+            -webkit-line-clamp: 3;
+            /* 设置或检索伸缩盒对象的子元素的排列方式 */
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        xxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxx
+    </div>
+</body>
+</html>
