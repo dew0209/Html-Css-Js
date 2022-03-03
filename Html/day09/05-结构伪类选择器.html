@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*ul li:first-child {
+            background-color: pink;
+        }
+        ul li:last-child {
+            background-color: pink;
+        }
+        ul li:nth-child(5) {
+            background-color: pink;
+        }*/
+        /*
+            nth-child
+                可接数字，奇偶，公式
+        */
+        /* even 偶数  odd 奇数 */
+        /*ul li:nth-child(even){
+            background-color: #00a4ff;
+        }*/
+        /*
+            nth-child(n)：从0开始每次加1  相当于选择了所有孩子  字母只能是n哦，不能是其他字母
+            nth-child(2n)：偶数
+            nth-child(2n + 1)：奇数
+            nth-child(n + 5)：后5个
+            nth-child(-n + 5)：前5个
+        */
+        /*ol li:nth-child(-n + 5){
+            background-color: #050505;
+        }*/
+        ul li:first-of-type {
+            background-color: pink;
+        }
+        ul li:last-of-type {
+            background-color: pink;
+        }
+        /* 两者区别 */
+        /* 执行的时候首先看 :nth-child(1) 选中光头强，在看div不符合，不改变，故没有被选中 */
+        section div:nth-child(1){
+            background-color: red;
+        }
+        /* 先找div 再找第一个 */
+        section div:nth-of-type(1){
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p>光头强</p>
+        <div>熊大</div>
+        <div>熊二</div>
+    </section>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ol>
+</body>
+</html>

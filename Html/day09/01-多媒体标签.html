@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            视频
+            video：mp4 webm ogg
+                autoplay:视频就绪自动播放（谷歌浏览器需要添加muted来解决自动播放问题）
+                muted:静音播放
+                controls:显示播放控件
+                loop:是否循环播放
+                preload：预加载  auto预加载  none不加载  有autoplay则忽略该属性
+                poster:等待时候的图片
+            音频
+            audio：mp3 wav ogg
+                谷歌把音频和视频的自动播放禁止了（后期通过js解决）
+
+
+        */
+        video {
+            width: 100%;
+
+        }
+    </style>
+</head>
+<body>
+    <!--<video src="media/mi.mp4" autoplay="autoplay" muted="muted" controls="controls" loop="loop" poster="media/mi9.jpg"></video>-->
+    <audio src="media/music.mp3" autoplay="autoplay" controls="controls" loop="loop"></audio>
+</body>
+</html>

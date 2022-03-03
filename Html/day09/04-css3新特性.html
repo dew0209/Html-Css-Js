@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            新增选择器
+                1.属性选择器
+                2.结构伪类选择器
+                3.伪元素选择器
+             类选择器 属性选择器 伪类选择器 权重为10
+        */
+        /*
+            xxx[xx]
+            xxx[xx=xx]
+            xxx[xx^=xx]以xx开头
+            xxx[xx$=xx]以xx结尾
+            xxx[xx*=xx]包含xx
+
+        */
+        /*input[value="请输入用户名"] {
+            color: pink;
+        }*/
+        /* 权重1 + 10 = 11 */
+        input[type=text] {
+            color: #ff6700;
+        }
+        div[class^="icon"] {
+            color: #00a4ff;
+        }
+        section[class$="data"] {
+            color: green;
+        }
+        span[class*="xx"] {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 属性选择器 -->
+    <input type="text" value="请输入用户名">
+    <input type="text" value="nmd">
+    <input type="password" value="nmd">
+    <div class="icon1">1</div>
+    <div class="icon2">2</div>
+    <div class="icon3">3</div>
+    <div class="icon4">4</div>
+    <section class="icon1-data">2222</section>
+    <section class="icon2-data">2222</section>
+    <section class="icon3-ico">2222</section>
+    <span class="xx">122</span>
+    <span class="xxxyyy">122</span>
+    <span class="x">122</span>
+</body>
+</html>

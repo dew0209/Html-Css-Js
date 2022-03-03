@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            input：
+                required="required"
+                autofocus="autofocus"自动获得焦点
+                autocomplete="on"提交记录 默认on  提交之后才会生效
+                multiple="multiple"提交多个文件
+
+        */
+        input::placeholder {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="search" name="ceshi" required="required" placeholder="pink老师" autofocus="autofocus" autocomplete="on">
+        <input type="file" multiple="multiple">
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
