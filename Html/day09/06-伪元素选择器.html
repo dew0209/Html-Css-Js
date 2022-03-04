@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            伪元素选择器可以帮助我们利用css创建新标签元素，而不需要html标签，从而简化html结构。
+            ::before  在元素内部的前面插入内容
+            ::after   在元素内部的后面插入内容
+            注意：
+                1.before和after创建一个元素，但是属于行内元素
+                2.在文档树中找不到，所以称为伪元素
+                3.语法：ele::before{}
+                4.before和after必须有content属性
+                5.before在父元素内容的前面创建元素，after在父元素内容的后面插入元素
+                6.伪元素选择器和标签选择器一样，权重为1
+        */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        /* 权重是2 */
+        div::before {
+            content: "我";
+        }
+
+        div::after {
+            content: "小猪佩奇";
+        }
+    </style>
+</head>
+<body>
+    <div>是</div>
+</body>
+</html>
