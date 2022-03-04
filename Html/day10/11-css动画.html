@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            from  to 等价于  0%  100%
+        */
+        @keyframes move {
+            from {
+                transform: translate(0px,0px);
+            }
+            to {
+                transform: translate(100px,100px);
+            }
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            animation-name: move;
+            animation-duration: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @keyframes move {
+            0% {
+                transform: translate(0,0);
+            }
+            100% {
+                transform: translate(1000px,1000px);
+            }
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* 动画名称 */
+            animation-name: move;
+            /* 持续时间 */
+            animation-duration: 3s;
+            /* 运动曲线 */
+            animation-timing-function: ease-in-out;
+            /* 何时执行 延迟 */
+            animation-delay: 1s;
+            /* 被播放的次数  infinite无限次 */
+            /*animation-iteration-count: infinite;*/
+            /* 是否逆向 alternate逆向  默认normal */
+            /*animation-direction: alternate;*/
+            /* 规定结束的状态  forwards   默认backwards回到起始状态 */
+            animation-fill-mode: forwards;
+        }
+        div:hover {
+            /* paused暂停动画 */
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

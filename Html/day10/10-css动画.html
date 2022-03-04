@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css动画</title>
+    <style>
+        /*
+            先定义动画，在使用（调用）动画
+        */
+        @keyframes  move {
+            /* 开始的状态 */
+            0% {
+                transform: translateX(0px);
+            }
+            /* 结束的状态 */
+            100% {
+                transform: translateX(1000px);
+            }
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 调用动画 */
+            animation-name: move;
+            /* 持续时间 */
+            animation-duration: 2s;
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            translate
+                1.定义2D转换中的移动，沿着x和y轴移动元素
+                2.translate最大的有点，不会影响到其他元素的位置
+                3.translate中的百分比单位是相对于自身元素的translate(50%,50%);
+                4.对行内标签没有效果
+        */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* translate(x,y); 需要带单位 */
+            /*transform: translate(100px,100px);*/
+        }
+        div:first-child {
+            transform: translate(30px,30px);
+        }
+        div:last-child {
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+</html>

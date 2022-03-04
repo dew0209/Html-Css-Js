@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>透视</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 0 auto;
+            /* 透视写在被观察者的父元素上 */
+            /* z越大物品越大 */
+            transform: translate3d(400px, 100px, 40px);
+        }
+        body {
+
+            perspective: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

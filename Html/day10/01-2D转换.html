@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            /*transform: translate(50%,50%);*/
+        }
+        p {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            transform: translate(-50%,-50%);
+            background-color: #00a4ff;
+        }
+        /* transform对行内元素无效 */
+        span {
+            transform: translate(300px,300px);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p></p>
+    </div>
+    <span>123</span>
+</body>
+</html>

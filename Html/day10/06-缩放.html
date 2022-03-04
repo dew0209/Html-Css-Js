@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+            transform: scale(x,y);
+
+         */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            transform-origin: left bottom;
+        }
+        div:hover {
+            /* 宽度2倍 高度2倍 */
+            /*transform: scale(2,2);*/
+            /* 宽高均2倍 */
+            /*transform: scale(2);*/
+            /* 缩放0.5 */
+            /* 不会影响其他盒子，且可以设置中心点 */
+            transform: scale(2);
+            /* 会影响其他盒子 */
+            /*width: 400px;
+            height: 400px;*/
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    123
+</body>
+</html>
