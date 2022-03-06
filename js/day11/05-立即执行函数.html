@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //立即执行函数，不需要调用，立马能够自己执行的函数
+    function fn() {
+        console.log(1);
+    }
+    //写法 (function [名字]() {})()或者(function [名字]() {}())
+    //立即执行函数最大的作用就是独立创建了一个作用域  避免了命名冲突问题
+    (function (a) {
+        console.log(a);
+    })(222);
+</script>
+</html>

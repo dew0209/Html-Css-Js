@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+    <script src="js/animate.js" rel="stylesheet"></script>
+</head>
+<body>
+    <button>点</button>
+    <div></div>
+</body>
+<script>
+    /*
+    * 核心原理：通过setInterval不断移动盒子的位置
+    * */
+    var div = document.querySelector('div');
+    var button = document.querySelector('button');
+    button.addEventListener('click',function () {
+        animate(div,400,function () {
+            div.style.backgroundColor = 'red';
+        });
+    })
+</script>
+</html>

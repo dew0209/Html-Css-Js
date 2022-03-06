@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素可视区域</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 10px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        client系列
+            客户端，我们使用client系列的相关书写来获取元素可视区的相关信息。通过client系列的相关属性可以动态的得到元素的边框大小，元素大小
+    -->
+    <div></div>
+    <script>
+        //client宽度和我们offsetWidth最大的区别就是不包含边框
+        var div = document.querySelector('div');
+        console.log(div.clientWidth);
+        console.log(div.clientLeft);//返回左边框的大小
+    </script>
+</body>
+</html>

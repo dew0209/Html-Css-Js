@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scroll系列</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid black;
+            padding: 10px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        scroll翻译过来就是滚动的，我们使用scroll系列的相关属性可以动态的得到该元素的大小，滚动距离等。
+            内容的高度大小，内容超出也可以得到实际大小
+    -->
+    <div>我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容</div>
+</body>
+<script>
+    var div = document.querySelector('div');
+    console.log(div.scrollHeight);
+    /* scroll滚动事件 当我们滚动条变化会触发的事件 */
+    div.addEventListener('scroll',function (e) {
+        console.log(div.scrollTop);
+    })
+</script>
+</html>
