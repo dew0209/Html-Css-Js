@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <style>
+        .container>.row>div {
+            border: 1px solid red;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- 列嵌套做好加一个row 消除父元素的padding值且高度自动和父级一样高 -->
+                <div class="row">
+                    <div class="col-md-6">a</div>
+                    <div class="col-md-6">b</div>
+                </div>
+            </div>
+            <div class="col-md-4">2</div>
+            <div class="col-md-4">3</div>
+        </div>
+
+    </div>
+</body>
+</html>
