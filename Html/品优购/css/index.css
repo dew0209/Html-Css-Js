@@ -5,9 +5,53 @@
     margin-top: 10px;
 }
 .focus {
+    position: relative;
+    overflow: hidden;
     float: left;
     width: 721px;
     height: 455px;
+}
+.focus ul li {
+    float: left;
+}
+.focus ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 600%;
+}
+.arrow-l,.arrow-r {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    margin-top: -20px;
+    width: 24px;
+    height: 40px;
+    background-color: rgba(0,0,0,.3);
+    text-align: center;
+    line-height: 40px;
+}
+.arrow-r {
+    right: 0;
+}
+.circle {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+}
+.circle li{
+    float: left;
+    width: 8px;
+    height: 8px;
+    border: 2px solid rgba(255,255,255,.5);
+    margin: 0 3px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.current {
+    background-color: #fff;
 }
 .newsflash {
     float: right;

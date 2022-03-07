@@ -78,5 +78,26 @@
 
         }
     })
+    goBack.addEventListener('click',function () {
+        //不跟单位，直接加数字
+        //window.scroll(0,0);//不是缓动的哦
+        animate(window,0)
+    })
+    function animate(obj,target,callback) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+            if(window.pageYOffset == target){
+                clearInterval(obj.timer);
+                callback();
+                return;
+            }
+            var step = (target - window.pageYOffset) / 10;
+            if(step < 0)step = Math.floor(step);
+            else {
+                step = Math.ceil(step);
+            }
+            window,scroll(0,window.pageYOffset + step);
+        },15)
+    }
 </script>
 </html>

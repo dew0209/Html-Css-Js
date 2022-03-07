@@ -3,7 +3,7 @@ function animate(obj,target,callback) {
     obj.timer = setInterval(function () {
         if(obj.offsetLeft == target){
             clearInterval(obj.timer);
-            callback && callback();
+            callback();
             return;
         }
         var step = (target - obj.offsetLeft) / 10;
