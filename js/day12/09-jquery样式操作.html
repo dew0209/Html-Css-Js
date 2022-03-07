@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式操作</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all .5s;
+        }
+        .current {
+            background-color: red;
+            transform: rotate(360deg);
+        }
+    </style>
+    <script>
+        /*
+        *   操作css方法
+        *       jquery可以使用css方法来修改简单元素样式，也可以操作类，修改多个样式
+        * */
+        $(function () {
+            console.log($("div").css("width"));//返回值  带单位的
+            $("div").css("width",'300px');//修改   可以不带单位，带单位也没事
+            // $("div").css({width:"400px",height:"600px",backgroundColor:"pink"});//多组写法
+            $("div").click(function () {
+                //添加
+                //$(this).addClass("current");
+                //删除
+                //$(this).removeClass("current");
+                //console.log(1);
+                $(this).toggleClass("current");
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="current"></div>
+</body>
+</html>

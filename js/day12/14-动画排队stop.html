@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 20px;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("button").eq(0).hover(function () {
+                $("div").eq(0).stop().fadeToggle(1000,);
+            })
+            $("button").eq(1).hover(function () {
+                $("div").eq(1).stop().fadeToggle(1000);
+            })
+            $("button").eq(2).hover(function () {
+                $("div").eq(2).stop().fadeToggle(1000);
+            })
+            $("button").eq(3).click(function () {
+                $("div").fadeTo(1000,0.5);
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>3</button>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

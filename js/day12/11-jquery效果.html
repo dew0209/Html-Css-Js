@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>效果</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        /*
+        * show([speed,[easing],[fn]])
+        * 参数都可以省略，无动画直接显示
+        * speed：slow normal fast或表示动画时长的毫秒数值
+        * 一般情况下，我们都不加参数直接显示隐藏就可以了
+        * */
+        $(function () {
+            $("button").eq(1).click(function () {
+                $("div").hide("fast",function () {
+                    alert(1);
+                });
+            })
+            $("button").eq(0).click(function () {
+                $("div").show("slow");
+            })
+            $("button").eq(2).click(function () {
+                $("div").toggle("slow");
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+    <div></div>
+</body>
+</html>

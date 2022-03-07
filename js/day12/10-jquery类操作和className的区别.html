@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .one {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+        .two {
+            background-color: #c81623;
+        }
+    </style>
+    <script>
+        $(function () {
+            //原生js中className操作会覆盖原先里面的类名，jquery里面类操作只是对指定类进行操作，不影响原生的类名
+            $("div").addClass("two");
+        })
+    </script>
+</head>
+<body>
+    <div class="one"></div>
+</body>
+</html>
