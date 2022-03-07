@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+        dom对象：用原生js获取过来的对象就是dom对象
+        jQuery对象：用jQuery获取过来的对象就是jQuery对象
+    -->
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            var myDiv = document.querySelector('div');//这是dom对象
+            var $myDiv = $('div');//这是jquery对象  jquery对象本质是：利用$对DOM对象包装后产生的对象（伪数组形式存储）
+            /*注意区分对象是dom对象还是jquery对象，不然会产生调用错误。jquery对象不能使用原生的js的属性和方法*/
+            //dom和jquery的相互转换
+            //dom对象转换为jquery对象
+            var $myDiv1 = $(myDiv);
+            $myDiv1.hide();
+            //jquery转换为dom对象
+            //方式1
+            //$myDiv1[0].style.display = 'block';
+            $myDiv1.get(0).style.display = 'block';
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+    </style>
+    <script>
+        $(function () {
+            $(".left li").mouseover(function () {
+                var index = $(this).index();
+                //alert(11);
+                $(".content div").eq(index).show();
+                $(".content div").eq(index).siblings('div').hide();
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <ul class="left">
+            <li><a href="#">女鞋子</a></li>
+            <li><a href="#">女鞋子</a></li>
+            <li><a href="#">女鞋子</a></li>
+            <li><a href="#">女鞋子</a></li>
+            <li><a href="#">女鞋子</a></li>
+            <li><a href="#">女鞋子</a></li>
+            <li><a href="#">女鞋子</a></li>
+            <li><a href="#">女鞋子</a></li>
+            <li><a href="#">女鞋子</a></li>
+        </ul>
+        <div class="content">
+            <div><a href=""><img src="images/cloud.gif" alt=""></a></div>
+            <div><a href=""><img src="images/rss.png" alt=""></a></div>
+            <div><a href=""><img src="images/cloud.gif" alt=""></a></div>
+            <div><a href=""><img src="images/cloud.gif" alt=""></a></div>
+            <div><a href=""><img src="images/cloud.gif" alt=""></a></div>
+            <div><a href=""><img src="images/cloud.gif" alt=""></a></div>
+            <div><a href=""><img src="images/cloud.gif" alt=""></a></div>
+            <div><a href=""><img src="images/cloud.gif" alt=""></a></div>
+            <div><a href=""><img src="images/cloud.gif" alt=""></a></div>
+        </div>
+    </div>
+</body>
+</html>

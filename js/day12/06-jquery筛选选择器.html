@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $('ol .item').siblings('li').css("color",'red');
+            //具体找第几个  都是根据索引的，注意下
+            $("ul li:eq(2)").css('color','blue');
+            $("ul li").eq(3).css('color','blue');
+            console.log($('div:first').hasClass('current'));/* 检查受否含有某个类 */
+        })
+    </script>
+</head>
+<body>
+    <ol>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li class="item">我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+    </ol>
+    <ul>
+        <li>我是ul 的li</li>
+        <li>我是ul 的li</li>
+        <li>我是ul 的li</li>
+        <li>我是ul 的li</li>
+        <li>我是ul 的li</li>
+    </ul>
+    <div class="current">俺有current</div>
+    <div>俺木有current</div>
+</body>
+</html>

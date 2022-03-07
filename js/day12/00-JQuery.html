@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery入门</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        /*
+        * JQuery：javascript的一个库
+        *   封装了javascript常用的功能代码，优化了DOM操作，事件处理，动画设计和ajax交互
+        *   学习JQuery的本质：就是学习如何调用函数
+        * */
+        //等待页面文档加载完毕
+        //$(document).ready(function(){})  $(function(){})
+        $(function () {
+            $('div').hide();
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+
+</html>

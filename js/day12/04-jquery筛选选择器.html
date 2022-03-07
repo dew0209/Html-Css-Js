@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $("ul li:first").css("color",'red');
+            $("ul li:eq(2)").css("color",'blue');
+            $("ol li:odd").css("color",'skyblue');//odd和even是考虑索引号的奇偶性
+            $("ol li:even").css("color",'pink');
+            //找父亲  最近一级
+            console.log($(".son").parent());
+            //找亲儿子
+            $(".nav").children("p").css('color','red');
+            //找所有的孩子，包括儿子和孙子
+            $(".nav").find("p").css('background','pink');
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+    </ul>
+    <ol>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+        <li>多个里面筛选几个</li>
+    </ol>
+    <div class="yeye">
+        <div class="father">
+            <div class="son">儿子</div>
+        </div>
+    </div>
+    <div class="nav">
+        <p>我是p</p>
+        <div>
+            <p>我是p</p>
+        </div>
+    </div>
+</body>
+</html>

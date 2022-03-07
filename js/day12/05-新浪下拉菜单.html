@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .nav {
+            display: block;
+            height: 200px;
+        }
+        li {
+            list-style: none;
+        }
+        ul>li {
+            float: left;
+            width: 200px;
+        }
+        ul li ul {
+
+        }
+    </style>
+
+    <script>
+        $(function () {
+            $(".nav>li").mouseover(function () {
+                $(this).children("ul").show();
+            });
+            $(".nav>li").mouseout(function () {
+                $(this).children("ul").hide();
+            });
+        })
+    </script>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="#">私信</a>
+                </li>
+                <li>
+                    <a href="#">私信</a>
+                </li>
+                <li>
+                    <a href="#">私信</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="#">私信</a>
+                </li>
+                <li>
+                    <a href="#">私信</a>
+                </li>
+                <li>
+                    <a href="#">私信</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="#">私信</a>
+                </li>
+                <li>
+                    <a href="#">私信</a>
+                </li>
+                <li>
+                    <a href="#">私信</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>
