@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件导读</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .current {
+            background-color: #c81623;
+        }
+    </style>
+    <script>
+        /*
+        * 单个事件注册
+        *   $("").事件(function(){})
+        * */
+        $(function () {
+            // $("div").click(function () {
+            //     $(this).css("background","black");
+            // });
+            // $("div").mouseover(function () {
+            //     $(this).css("background","skyblue");
+            // });
+            //事件处理on  绑定一个或多个事件的事件处理函数
+            /*$("div").on({
+                mouseenter: function () {
+                    $(this).css("background","black");
+                },
+                click: function () {
+                    $(this).css("background","skyblue");
+                }
+            })*/
+            $("div").on("mouseenter mouseleave",function () {
+                $(this).toggleClass("current");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

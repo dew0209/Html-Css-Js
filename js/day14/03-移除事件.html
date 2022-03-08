@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("div").on({
+                click: function () {
+                    console.log("我点击了");
+                },
+                mouseover: function () {
+                    console.log("我经过了");
+                }
+            });
+            $("div").off("click");
+            $("p").one("click",function () {
+                console.log("一次就好")
+            });
+        })
+    </script>
+</head>
+<body>
+    <div></div>
+    <p>我是屁</p>
+</body>
+</html>

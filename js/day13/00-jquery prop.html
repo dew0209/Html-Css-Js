@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <a href="http://www.baidu.com" title="都挺好">都挺好</a>
+    <input type="checkbox" name="" id="" checked>
+    <div index="1"></div>
+    <span data-index="222">123</span>
+    <script>
+        $(function () {
+            console.log($("a").prop("href"));
+            $("a").prop("title","我们都挺好");
+            $("input").change(function () {
+                console.log($(this).prop("checked"));
+            })
+            console.log($("div").prop("index"));//undefined
+            console.log($("div").attr("index"));//1
+            $("div").attr("index","4");
+            //data()
+            $("span").data("uname","andy");
+            console.log($("span").data("uname"));
+            //h5自定义属性，不用带data-
+            console.log($("span").data("index"));
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>元素操作</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        /*
+        * 元素操作
+        *   遍历 创建 添加 删除元素操作
+        *
+        * */
+        $(function () {
+            //遍历
+            //item是dom对象
+            var arr = ['red','green','blue'];
+            /*$("div").each(function (index,item) {
+                $(item).css("color",arr[index]);
+            })*/
+            $.each($("div"),function (index,item) {
+                $(item).css("color",arr[index]);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</body>
+</html>

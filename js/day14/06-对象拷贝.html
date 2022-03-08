@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            /*var targetObj = {};
+            var obj = {
+                id: 1,
+                name: "andy"
+            };
+            $.extend(targetObj,obj);
+            console.log(targetObj);*/
+            /*var targetObj = {
+                id: 0,// 覆盖
+                age: 18
+            };
+            var obj = {
+                id: 1,
+                name: "andy",
+                msg: {
+                    age: 22
+                }
+            };
+            $.extend(targetObj,obj);
+            console.log(targetObj);
+            targetObj.msg.age = 20;
+            console.log(targetObj);
+            console.log(obj);*/
+
+            var targetObj = {
+                id: 0,// 覆盖
+                age: 18,
+                msg: {
+                    ididid: 11
+                }
+            };
+            var obj = {
+                id: 1,
+                name: "andy",
+                msg: {
+                    age: 22
+                }
+            };
+            $.extend(true,targetObj,obj);
+            console.log(targetObj);
+            targetObj.msg.age=200;
+            console.log(obj);
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+    <style>
+        .section1 {
+            background: url("images/P_001.jpg") no-repeat;
+        }
+        .section2 {
+            background: url("images/P_002.jpg") no-repeat;
+        }
+        .section3 {
+            background: url("images/P_003.jpg") no-repeat;
+        }
+        .section4 {
+            background: url("images/P_004.jpg") no-repeat;
+        }
+
+    </style>
+    <script>
+        $(function () {
+            $("#dowebok").fullpage({
+                sectionsColor: ['red','black','pink'],
+                navigation: true
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="dowebok">
+        <div class="section section1">
+            <h3>第一屏里面的内容</h3>
+        </div>
+        <div class="section section2">
+            <h3>第二屏</h3>
+        </div>
+        <div class="section section3">
+            <h3>第三屏</h3>
+        </div>
+        <div class="section section4">
+            <h3>第四屏</h3>
+        </div>
+    </div>
+</body>
+</html>
