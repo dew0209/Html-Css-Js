@@ -1,0 +1,24 @@
+.w {
+    margin: 0 100px;
+}
+
+.navbtn .move {
+    margin-right: 100px!important;
+    margin-left: 0!important;
+}
+.navbar,.open>a{
+    background-color: #222!important;
+}
+.navbtn .blackC {
+    color: #222!important;
+}
+.navbtn .navbar-brand,.navbar-nav>li>a {
+    padding: 0 40px;
+    margin: 0 20px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 500;
+}
+.navbtn a {
+    color: white!important;
+}
