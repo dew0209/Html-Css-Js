@@ -12,9 +12,59 @@
         <link rel="stylesheet" href="../css/editormd.css" />
         <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
         <style>
+            body {
+                background-color: #f3e7e9;
+            }
+            #layout {
+                width: 70% !important;
+                height: 520px!important;
+                float: right;
+            }
             .editor-sec {
                 margin-top: 20px;
+                margin-right: 100px!important;
+                box-shadow: 5px 5px 5px rgba(0,0,0,0.1) !important;
             }
+            .person-only {
+                width: 20% !important;
+                float: left;
+                margin-top: 20px;
+                background-color: white;
+                margin-left: 100px!important;
+                box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+            }
+            .person-only img {
+                width: 200px;
+                height: 200px;
+                background-repeat: no-repeat;
+
+            }
+            .person-only .list-group li div {
+                text-align: center;
+            }
+            .person-only .list-group li .username-show{
+                font-weight: 700;
+                font-size: 24px;
+            }
+            .p-in-fa {
+                background-color: black;
+                display: block;
+                margin: 2px 0 0!important;
+                padding: 0!important;
+                border: 0;
+                width: 120px;
+                height: 120px;
+            }
+            .p-in {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background-color: pink;
+                margin: 0;
+                padding: 0;
+                text-align: left;
+            }
+
         </style>
     </head>
     <body>
@@ -124,6 +174,40 @@
         <div id="bg" class="login-bg"></div>
     </section>
         <!-- 个人信息区域 -->
+        <div class="person-only">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <img src="./images/xue.png" alt="..." class="img-rounded">
+                </li>
+                <li class="list-group-item">
+                    <div class="username-show">用户名</div>
+                    <div>个性签名</div>
+                </li>
+                <li class="list-group-item">
+                    <div><span>关注数：</span> 10 </div>
+                    <div><span>阅读量：</span> 10 </div>
+                    <div><span>粉丝数：</span> 10 </div>
+                    <div style="text-align: right">在线</div>
+                </li>
+                <li class="list-group-item p-in-fa">
+                    <div class="p-in">
+                        <img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded">
+                    </div>
+                    <div class="p-in">
+                        <img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded">
+                    </div>
+                    <div class="p-in">
+                        <img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded">
+                    </div>
+                    <div class="p-in">
+                        <img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded">
+                    </div>
+                    <div class="p-in">
+                        <img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded">
+                    </div>
+                </li>
+            </ul>
+        </div>
         <!-- 编辑区域 -->
         <section class="editor-sec">
             <!-- 文章标题，分类区域 -->
@@ -142,8 +226,8 @@
             
             $(function() {
                 testEditor = editormd("test-editormd", {
-                    width: "70%",
-                    height: 640,
+                    width: "100%",
+                    height: 520,
                     emoji : true,
                     path : '../lib/'
                 });
