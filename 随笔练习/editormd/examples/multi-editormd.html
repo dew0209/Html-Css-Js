@@ -3,10 +3,20 @@
     <head>
         <meta charset="utf-8" />
         <title>Multi Editor.md - Editor.md examples</title>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="../../blog/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../blog/css/nav.css">
+        <link rel="stylesheet" href="../../blog/css/loginSection.css">
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.js"></script>
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="../css/editormd.css" />
         <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
-        <style>            
+        <style>      
+            body {
+                background-color: #f3e7e9;
+            }
             h3 {
                 width : 90%;
                 margin: 0 auto 15px;
@@ -15,50 +25,70 @@
             .editormd {
                 margin: 20px auto;
             }
+
         </style>
     </head>
     <body>
-        <div id="layout">
-            <header>
-                <h1>Multi Editor.md</h1>
-                <p>多个 Editor.md 并存</p>
-                <br/>
-            </header>
-            <h3>Editor.md A</h3>
-            <div id="test-editormd"></div>
-            <h3>Editor.md B</h3>
-            <div id="test-editormd2"></div>
-            <h3>Editor.md C</h3>
-            <div id="test-editormd3"></div>
+    <div id="layout">
+        <header>
+            <h1>多语言支持（l18n）</h1>
+            <p>multi-languages for l18n.
+                <select id="lang-select">
+                    <option selected="selected">Languages</option>
+                    <option value="en">English (en)</option>
+                    <option value="zh-tw">繁體中文 (zh-tw)</option>
+                    <option value="zh-cn">简体中文 (zh-cn)</option>
+                </select>
+            </p>
+        </header>
+        <div id="test-editormd">
+            <textarea style="display:none;"></textarea>
         </div>
+    </div>
         
         <script src="js/jquery.min.js"></script> 
         <script src="../editormd.js"></script> 
         <script type="text/javascript">
-            var testEditormd, testEditormd2;
+            var testEditormd;
             
             $(function() {                        
                 testEditormd = editormd("test-editormd", {
-                    width: "90%",
+                    width: "80%",
                     height: 480,
-                    markdown : "#### Editor.md A",
-                    path : '../lib/'
-                });
-
-                testEditormd2 = editormd("test-editormd2", {
-                    width: "90%",
-                    height: 480,
-                    markdown : "#### Editor.md B",
-                    path : '../lib/'
-                });
-
-                testEditormd3 = editormd("test-editormd3", {
-                    width: "90%",
-                    height: 480,
-                    markdown : "#### Editor.md C",
+                    markdown : "# 呵呵",
                     path : '../lib/'
                 });
             });
         </script>
     </body>
 </html>
+
+<script>
+    var login=document.getElementById('login');
+    var register=document.getElementById('register');
+    var form_box=document.getElementsByClassName('form-box')[0];
+    var register_box=document.getElementsByClassName('register-box')[0];
+    var login_box=document.getElementsByClassName('login-box')[0];
+    register.addEventListener('click',()=>{
+        form_box.style.transform='translateX(80%)';
+        login_box.classList.add('hidden');
+        register_box.classList.remove('hidden');
+    })
+    login.addEventListener('click',()=>{
+        form_box.style.transform='translateX(0%)';
+        register_box.classList.add('hidden');
+        login_box.classList.remove('hidden');
+    })
+    var mask = document.querySelector('.login-bg');
+    var loginUpDown = document.querySelector('#link');
+    var loginSection = document.querySelector('.loginSection');
+    var loginClose = document.querySelector('.loginClose');
+    loginUpDown.addEventListener('click',()=>{
+        loginSection.style.display = 'flex';
+        mask.style.display = 'block';
+    })
+    loginClose.addEventListener('click',()=>{
+        loginSection.style.display = 'none';
+        mask.style.display = 'none';
+    })
+</script>

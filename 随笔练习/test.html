@@ -6,22 +6,36 @@
     <link rel="stylesheet" href="editormd/css/editormd.css" />
 </head>
 <body>
-    <div id="test-editor">
-        <textarea style="display:none;">### 关于 Editor.md
-
-    **Editor.md** 是一款开源的、可嵌入的 Markdown 在线编辑器（组件），基于 CodeMirror、jQuery 和 Marked 构建。
-        </textarea>
+    <div id="layout" class="container">
+    <div class="table-fa blog-1">
+        <table class="table" style="background-color: white">
+            <tr>
+                <td class="styleShow">文章（分类，从数据库获取）</td>
+                <td></td>
+                <td style="text-align: right" class="styleShow"><a href="">文章标题(从数据库获取)</a></td>
+            </tr>
+            <tr>
+                <!-- /images/xue.png  用户头像，从数据库获取 -->
+                <td><a href=""><img class="avatar" src="/images/xue.png" alt=""></a></td>
+                <td></td>
+                <td style="font-size: 20px;text-align: right">用户名称（从数据库获取）</td>
+            </tr>
+            <tr>
+                <!-- editormd-view-1最好也从数据库获取  editormd-view + 唯一id的形式  == 真实的id -->
+                <td colspan="3"><div id="editormd-view-1"><textarea style="" >从数据库获取</textarea> </div></td>
+            </tr>
+            <tr>
+                <!--
+                    付费和文章做成一个表？首页展示付费嘛？如果付费，只获取简介，不获取内容，文章没有简介，不能使用overflow隐藏的方式，会被暴力获取的
+                    合集不应该展示，主页主要是文章和付费文章了。文章和付费在一个表
+                -->
+                <!-- 固定的 -->
+                <td style="text-align: center"><a href=""><span class="glyphicon glyphicon-heart-empty"></span></a></td>
+                <td style="text-align: center"><a href=""><span class="glyphicon glyphicon-comment"></span></a></td>
+                <td style="text-align: center"><a href=""><span class="glyphicon glyphicon glyphicon-star-empty"></span></a></td>
+            </tr>
+        </table>
     </div>
-    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="editormd/editormd.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            var editor = editormd("test-editor", {
-                 width  : "100%",
-                 height : "100%",
-                path   : "editormd/lib/"
-            });
-        });
-    </script>
+</div>
 </body>
 </html>

@@ -43,14 +43,14 @@
     display: none;
     transition: 0.5s;
 }
-h1 {
+.loginSection h1 {
     text-align: center;
     margin-bottom: 25px;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 5px;
 }
-input{
+.loginSection input{
     background-color: transparent;
     width: 70%;
     color: #fff;
@@ -62,16 +62,16 @@ input{
     font-size: 14px;
     letter-spacing: 2px;
 }
-input::placeholder {
+.loginSection input::placeholder {
     color: #fff;
 }
-input:focus {
+.loginSection input:focus {
     color: #a262ad;
     outline: none;
     border-bottom: 1px solid #a262ad80;
     transition: 0.5s;
 }
- input:focus::placeholder{
+.loginSection input:focus::placeholder{
     opacity: 0;
 }
 .form-box button {
