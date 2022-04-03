@@ -1,4 +1,4 @@
-* {
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     margin: 0;
     padding: 0;
 }
@@ -9,7 +9,7 @@
     align-items: center;
     background: linear-gradient(200deg,#f3e7e9,#e3eeff);
 }
-.container {
+.loginSection .container {
     background-color: #fff;
     width: 650px;
     height: 415px;
@@ -43,14 +43,14 @@
     display: none;
     transition: 0.5s;
 }
-.loginSection h1 {
+h1 {
     text-align: center;
     margin-bottom: 25px;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 5px;
 }
-.loginSection input{
+input{
     background-color: transparent;
     width: 70%;
     color: #fff;
@@ -58,20 +58,20 @@
     border-bottom: 1px solid rgba(255,255,255,0.4);
     padding: 10px 0;
     text-indent: 10px;
-    margin: 8px 0;
+    margin: 8px 0!important;
     font-size: 14px;
     letter-spacing: 2px;
 }
-.loginSection input::placeholder {
+input::placeholder {
     color: #fff;
 }
-.loginSection input:focus {
+input:focus {
     color: #a262ad;
     outline: none;
     border-bottom: 1px solid #a262ad80;
     transition: 0.5s;
 }
-.loginSection input:focus::placeholder{
+input:focus::placeholder{
     opacity: 0;
 }
 .form-box button {
@@ -175,4 +175,18 @@
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, .3);
+}
+#sendEmailCode input{
+    float: left;
+}
+#sendEmailCode button{
+    display: block;
+    float: right;
+    height: 30px;
+    width: 60px;
+    font-size: 8px!important;
+    line-height: 30px;
+    text-align: center;
+    margin: 0!important;
+    padding: 0!important;
 }

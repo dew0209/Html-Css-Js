@@ -1,11 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 .w {
-    margin: 0 100px;
+    margin: 0 200px;
 }
-
+body {
+    background: #f3e7e9;
+}
+#error-message {
+    color: red;
+}
+#login-error--message {
+    color: red;
+}
 .navbtn .move {
     margin-right: 100px!important;
     margin-left: 0!important;
@@ -27,8 +31,8 @@
     color: white!important;
 }
 .avatar {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -37,4 +41,23 @@
     transform: translateY(50%);
     margin-right: 5px;
     color: black;
+}
+
+
+
+.editormd-html-preview {
+    height: 300px;
+}
+.styleShow {
+    font-size: medium;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+.table {
+    box-shadow: 5px 5px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }

@@ -2,7 +2,7 @@
 <html lang="zh">
     <head>
         <meta charset="utf-8" />
-        <title>多语言支持 - Editor.md examples</title>
+        <title></title>
         <link rel="stylesheet" href="../../blog/css/bootstrap.min.css">
         <link rel="stylesheet" href="../../blog/css/nav.css">
         <link rel="stylesheet" href="../../blog/css/loginSection.css">
@@ -19,6 +19,7 @@
                 width: 70% !important;
                 height: 520px!important;
                 float: right;
+                box-shadow: 5px 5px 5px rgba(0,0,0,0.1) !important;
             }
             .editor-sec {
                 margin-top: 20px;
@@ -31,7 +32,6 @@
                 margin-top: 20px;
                 background-color: white;
                 margin-left: 100px!important;
-                box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
             }
             .person-only img {
                 width: 200px;
@@ -42,14 +42,18 @@
             .person-only .list-group li div {
                 text-align: center;
             }
+            .editor-self {
+                width: 100%;
+                height: 50px;
+                background-color: white;
+            }
             .person-only .list-group li .username-show{
                 font-weight: 700;
                 font-size: 24px;
             }
             .p-in-fa {
-                background-color: black;
                 display: block;
-                margin: 2px 0 0!important;
+                margin: 5px auto;
                 padding: 0!important;
                 border: 0;
                 width: 120px;
@@ -64,6 +68,15 @@
                 padding: 0;
                 text-align: left;
             }
+            .editor-self div{
+                float: left;
+                text-align: center;
+            }
+            .editor-self .form-group {
+                margin: 4px;
+                width: 48%;
+            }
+
 
         </style>
     </head>
@@ -189,33 +202,52 @@
                     <div><span>粉丝数：</span> 10 </div>
                     <div style="text-align: right">在线</div>
                 </li>
-                <li class="list-group-item p-in-fa">
+                <li class="list-group-item p-in-fa" style="width: 140px;height: 140px">
                     <div class="p-in">
-                        <img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded">
+                        <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
                     </div>
                     <div class="p-in">
-                        <img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded">
+                        <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
                     </div>
                     <div class="p-in">
-                        <img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded">
+                        <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
                     </div>
                     <div class="p-in">
-                        <img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded">
+                        <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
                     </div>
                     <div class="p-in">
-                        <img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded">
+                        <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
+                    </div>
+                    <div class="p-in">
+                        <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
+                    </div>
+                    <div class="p-in">
+                        <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
+                    </div>
+                    <div class="p-in">
+                        <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
+                    </div>
+                    <div class="p-in">
+                        <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
                     </div>
                 </li>
             </ul>
         </div>
         <!-- 编辑区域 -->
         <section class="editor-sec">
-            <!-- 文章标题，分类区域 -->
-
-            <!-- md区域 -->
             <div id="layout">
+                <div class="editor-self">
+                    <div class="form-group">
+                        <label class="sr-only" for="title">标题</label>
+                        <input type="text" class="form-control" id="title" placeholder="标题">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="category">分类</label>
+                        <input type="text" class="form-control col-lg-6" id="category" placeholder="分类(以逗号隔开，最多支持三个)">
+                    </div>
+                </div>
                 <div id="test-editormd">
-                    <textarea style="display:none;"></textarea>
+                    <textarea style="display:none;">wq</textarea>
                 </div>
             </div>
         </section>
@@ -232,6 +264,7 @@
                     path : '../lib/'
                 });
             });
+
         </script>
         <script>
         var login=document.getElementById('login');
