@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖动模态框</title>
+    <style>
+        .chat-header {
+            position: fixed;
+            bottom: 0;
+            right: 100px;
+            width: 40px;
+            height: 40px;
+        }
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+        }
+        .chat-fa {
+            display: none;
+            width: 900px;
+            height: 480px;
+            position: fixed;
+            border: 1px solid #ebebeb;
+            left: 50%;
+            top: 50%;
+            background: #ffffff;
+            box-shadow: 0px 0px 20px #ddd;
+            z-index: 999;
+            transform: translate(-50%,-50%);
+        }
+        .chat-colse {
+            width: 100%;
+            text-align: left;
+            line-height: 40px;
+            height: 40px;
+            font-size: 18px;
+            position: relative;
+            cursor: move;
+            background-color: #ECEAE9;
+            border-bottom: lightgrey solid 1px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .chat-colse span {
+            font-size: 12px;
+            border: #ebebeb solid 1px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+        }
+        .chat-people {
+            float: left;
+            width: 30%;
+            height: 440px;
+            background-color: #ECEAE9;
+            border-bottom: lightgrey solid 1px;
+        }
+        .chat-index {
+            float: right;
+            width: 70%;
+            height: 440px;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-header">
+        <a href="javascript:;" id="link">
+            <img src="images/chat.png" alt="">
+        </a>
+    </div>
+    <div class="chat-fa" id="chat-fa">
+        <div id="title" class="chat-colse" style="position:relative;">
+            <span>chat</span>
+            <span style="position: absolute;right: 0"><a id="closeBtn" href="javascript:void(0);" class="close-btn">关闭</a></span>
+        </div>
+        <div class="chat-people">
+            联系人窗口
+        </div>
+        <div class="chat-index">聊天窗口</div>
+    </div>
+
+</body>
+<script>
+    var login = document.querySelector('.chat-fa');
+    var link = document.querySelector('#link');
+    var closeBtn = document.querySelector('#closeBtn');
+    var title = document.querySelector('#title');
+    link.addEventListener('click',function () {
+        login.style.display = 'block';
+    });
+    closeBtn.addEventListener('click',function () {
+        login.style.display = 'none';
+    });
+    title.addEventListener('mousedown',function (e) {
+        var x = e.pageX - login.offsetLeft;
+        var y = e.pageY - login.offsetTop;
+        function move(e) {
+            login.style.left = e.pageX - x + 'px';
+            login.style.top = e.pageY - y + 'px';
+        }
+        document.addEventListener('mousemove',move);
+        document.addEventListener('mouseup',function (e) {
+            document.removeEventListener('mousemove',move);
+        });
+    });
+</script>
+</html>

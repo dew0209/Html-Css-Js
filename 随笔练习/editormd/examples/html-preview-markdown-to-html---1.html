@@ -13,8 +13,8 @@
         <style>
             .editormd-html-preview {
                 width: 100%;
+                height: auto;
                 margin-right: 200px!important;
-
             }
             body {
                 background-color: #f3e7e9;
@@ -22,82 +22,21 @@
             #layout {
                 margin: 10px!important;
                 padding: 10px!important;
-                /*box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);*/
             }
-            .person-only {
-                position: fixed;
-                width: 20% !important;
-                float: left;
-                margin-top: 20px;
-                background-color: white;
-                margin-left: 100px!important;
-            }
-            .person-only img {
-                width: 200px;
-                height: 200px;
-                background-repeat: no-repeat;
 
-            }
-            .person-show-self {
-                position: relative;
-            }
-            .person-only .list-group li div {
-                text-align: center;
-            }
-            .person-only .list-group li .username-show{
-                font-weight: 700;
-                font-size: 24px;
-            }
-            .p-in-fa {
-                display: block;
-                margin: 5px auto;
-                padding: 0!important;
-                border: 0;
-                width: 120px;
-                height: 120px;
-            }
-            .p-in {
-                display: inline-block;
-                width: 40px;
-                height: 40px;
-                background-color: pink;
-                margin: 0;
-                padding: 0;
-                text-align: left;
-            }
+
             li {
                 list-style: none;
             }
             /* 展示区域 */
             /* 导航条 */
             .mess-people {
-                width: 60%;
+                position: relative;
                 height: auto;
                 background-color: #fffffc;
-                float: right;
-                margin-top: 20px;
-                margin-left: 20px;
-                margin-right: 100px;
-            }
-            .nav-people li {
-                list-style: none;
-                float: left;
-                width: 50px;
-                height: 60px;
-                margin-left: 60px;
-                line-height: 60px;
-                font-size: 20px;
-                text-align: center;
-                padding: 2px;
-            }
-            .nav-people li:hover {
-                background-color: skyblue;
-            }
-            /* 切换显示 */
-            /* 动态 */
-            .person-show-diff {
-                margin-right: 100px;
-                margin-left: 100px;
+                margin-left: 200px!important;
+                margin-right: 200px!important;
+                box-shadow: 0 0 10px lightgray;
             }
             .pe-blog {
                 margin-top: 30px;
@@ -111,9 +50,48 @@
             .item-show .table {
                 box-shadow: none;
             }
+            .love {
+                position: absolute;
+                top:0;
+                left:-30px;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                background-color: white;
+                box-shadow: 0 0 30px lightgray;
+            }
+            .collection {
+                position: absolute;
+                top:30px;
+                left:-30px;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                background-color: white;
+                box-shadow: 0 0 30px lightgray;
+            }
+            .fa-comment-sub {
+                background-color: white;
+                margin-left: 200px!important;
+                margin-right: 200px!important;
+            }
+            .comment-sum {
+                font-weight: 700;
+                font-size: 20px;
+            }
             .btn-info {
-                background-color: #5bc0de!important;
+                background: #5bc0de!important;
                 border-color: #46b8da!important;
+            }
+            .comment-show {
+                height: 600px;
+            }
+            .row {
+                text-align: left;
+                margin-left: 5px;
+                margin-right: 5px;
             }
         </style>
     </head>
@@ -162,73 +140,9 @@
             </div>
         </nav>
 
-        <section class="person-show-self">
-            <div class="person-show-diff">
-                <!-- 个人信息区域 -->
-                <div class="person-only">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <img src="./images/xue.png" alt="..." class="img-rounded">
-                        </li>
-                        <li class="list-group-item">
-                            <div class="username-show">用户名</div>
-                            <div>个性签名</div>
-                        </li>
-                        <li class="list-group-item">
-                            <div><span>关注数：</span> 10 </div>
-                            <div><span>阅读量：</span> 10 </div>
-                            <div><span>粉丝数：</span> 10 </div>
-                            <div style="text-align: right">在线</div>
-                        </li>
-                        <li class="list-group-item p-in-fa" style="width: 140px;height: 140px">
-                            <div class="p-in">
-                                <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
-                            </div>
-                            <div class="p-in">
-                                <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
-                            </div>
-                            <div class="p-in">
-                                <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
-                            </div>
-                            <div class="p-in">
-                                <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
-                            </div>
-                            <div class="p-in">
-                                <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
-                            </div>
-                            <div class="p-in">
-                                <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
-                            </div>
-                            <div class="p-in">
-                                <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
-                            </div>
-                            <div class="p-in">
-                                <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
-                            </div>
-                            <div class="p-in">
-                                <a href=""><img style="width: 40px;height: 40px" src="./images/xue.png" alt="..." class="img-rounded"></a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
+        <section class="">
+            <div class="">
                 <div class="mess-people">
-                    <!-- 展示 -->
-                    <!-- 1. 导航条 -->
-                    <nav class="nav-people">
-                        <ul>
-                            <li class="item-click"><a href="#">动态</a></li>
-                            <li class="item-click"><a href="#">博客</a></li>
-                            <!-- 付费对本人和非本人有不同的区别 -->
-                            <li class="item-click"><a href="#">付费</a></li>
-                            <li class="item-click"><a href="#">收藏</a></li>
-                            <!-- 只对本人开放 -->
-                            <li class="item-click"><a href="#">粉丝</a></li>
-                            <li class="item-click"><a href="#">关注</a></li>
-                            <li class="item-click"><a href="#">通知</a></li>
-                        </ul>
-                    </nav>
-                    <div class="clear"></div>
                     <!-- 2.  动态 -->
                     <section>
                         <ul>
@@ -239,376 +153,177 @@
                                         <div class="table-fa blog-1">
                                             <table class="table" style="background-color: white">
                                                 <tr>
-                                                    <td class="styleShow show-1">${post.type.typeName}</td>
+                                                    <td class="styleShow show-1"></td>
                                                     <td></td>
-                                                    <td style="text-align: right" class="styleShow"><a href="" class="show-2">${post.title}</a></td>
+                                                    <td style="text-align: right" class="styleShow"><a href="" class="show-2"></a></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href=""><img class="avatar show-3" src="./images/xue.png" alt=""> <span class="show-7">${post.user.username}</span></a></td>
-                                                    <td></td>
-                                                    <td style="font-size: 20px;text-align: right" class="show-4">时间</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="3"><div id="editormd-view-1" class="div-blog"><textarea style="" class="show-5">```java
-//会去扫描拥有这些 @Controller @Service @Repository @Component注解的类
-@ComponentScan(nfig {
-    @Bean("person")
-    public Person person(){
-        System.out.println("给容器中添加person");
-        return new Person("person",22);
-    }
-在`cap6`包下操作
-`conf
-```
-}
-```
-`config`包下，`JamesFactoryBean`类
-``
-package com.enjoy.cap7.bean;
-public class Monkey {
-}
-```
-单例输出`true`
-将其换成多例 输出`false`
-`bean1 bean2`是`class com.enjoy.cap7.bean.Monkey`类型的哦。
-这种形式，自带懒加载。无论单实例还是多实例，`getBean`的时候被创建。
-注意：我们打印所有bean的名字的时候会有`jamesFactoryBean`而不是实际的`Monkey`的对象，这是因为在`getBean`的时候，调用的是`getObject()`方法。这让我想到了一点，在mybatis中，mapper应该是多例的，和spring的整合也可以采用这种方式，只要将其设置为多例即可。</textarea> </div></td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                        <!-- 拆分2 -->
-                                        <div class="table-fa blog-1">
-                                            <table class="table" style="background-color: white">
-                                                <tr>
-                                                    <td class="styleShow show-1">${post.type.typeName}</td>
-                                                    <td></td>
-                                                    <td style="text-align: right" class="styleShow"><a href="" class="show-2">${post.title}</a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href=""><img class="avatar show-3" src="./images/xue.png" alt=""> <span class="show-7">${post.user.username}</span></a></td>
+                                                    <td><a href=""><img class="avatar show-3" src="./images/xue.png" alt=""> <span class="show-7"></span></a></td>
                                                     <td></td>
                                                     <td style="font-size: 20px;text-align: right" class="show-4">时间</td>
                                                 </tr>
                                                 <tr>
-                                                    <td colspan="3"><div id="editormd-view-2" class="div-blog"><textarea style="" class="show-5">```java
-//会去扫描拥有这些 @Controller @Service @Repository @Component注解的类
-@ComponentScan(nfig {
-    @Bean("person")
-    public Person person(){
-        System.out.println("给容器中添加person");
-        return new Person("person",22);
-    }
-在`cap6`包下操作
-`conf
-```
-}
-```
-`config`包下，`JamesFactoryBean`类
-``
-package com.enjoy.cap7.bean;
-public class Monkey {
-}
-```
-单例输出`true`
-将其换成多例 输出`false`
-`bean1 bean2`是`class com.enjoy.cap7.bean.Monkey`类型的哦。
-这种形式，自带懒加载。无论单实例还是多实例，`getBean`的时候被创建。
-注意：我们打印所有bean的名字的时候会有`jamesFactoryBean`而不是实际的`Monkey`的对象，这是因为在`getBean`的时候，调用的是`getObject()`方法。这让我想到了一点，在mybatis中，mapper应该是多例的，和spring的整合也可以采用这种方式，只要将其设置为多例即可。</textarea> </div></td>
+                                                    <td colspan="3"><div id="editormd-view-1" class="div-blog"><textarea style="" class="show-5">```java</textarea></div></td>
                                                 </tr>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="item-show">
-                                <!-- 标题           时间   阅读量  （按时间进行排序）-->
-                                <table class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th scope="row">#</th>
-                                            <th>标题</th>
-                                            <th>时间</th>
-                                            <th>阅读量</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>spring学习笔记一</td>
-                                            <td>2022-04-02 10:23:00</td>
-                                            <td>112</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>spring学习笔记二</td>
-                                            <td>2022-04-02 10:23:00</td>
-                                            <td>112</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>spring学习笔记三</td>
-                                            <td>2022-04-02 10:23:00</td>
-                                            <td>112</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>spring学习笔记四</td>
-                                            <td>2022-04-02 10:23:00</td>
-                                            <td>112</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>spring学习笔记四</td>
-                                            <td>2022-04-02 10:23:00</td>
-                                            <td>112</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>spring学习笔记四</td>
-                                            <td>2022-04-02 10:23:00</td>
-                                            <td>112</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>spring学习笔记四</td>
-                                            <td>2022-04-02 10:23:00</td>
-                                            <td>112</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>spring学习笔记四</td>
-                                            <td>2022-04-02 10:23:00</td>
-                                            <td>112</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>spring学习笔记四</td>
-                                            <td>2022-04-02 10:23:00</td>
-                                            <td>112</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>spring学习笔记四</td>
-                                            <td>2022-04-02 10:23:00</td>
-                                            <td>112</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div align="right">
-                                    <nav aria-label="Page navigation">
-                                        <ul class="pagination" style="margin-right: 5px">
-                                            <li>
-                                                <a href="#" aria-label="Previous">
-                                                    <span aria-hidden="true">&laquo;</span>
-                                                </a>
-                                            </li>
-                                            <li class="active"><a href="#" >1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li>
-                                                <a href="#" aria-label="Next">
-                                                    <span aria-hidden="true">&raquo;</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </li>
-                            <!-- 付费对本人和非本人有不同的区别 -->
-                            <li class="item-show">
-                                <table class="table table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th scope="row">#</th>
-                                        <th>标题</th>
-                                        <th>时间</th>
-                                        <th>收/总 (人数)</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>spring学习笔记一</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>2/4</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>spring学习笔记一</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>2/4</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>spring学习笔记一</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>2/4</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>spring学习笔记一</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>2/4</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>spring学习笔记一</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>2/4</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>spring学习笔记一</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>2/4</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>spring学习笔记一</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>2/4</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>spring学习笔记一</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>2/4</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
-                                    <div align="right">
-                                        <nav aria-label="Page navigation">
-                                            <ul class="pagination" style="margin-right: 5px">
-                                                <li>
-                                                    <a href="#" aria-label="Previous">
-                                                        <span aria-hidden="true">&laquo;</span>
-                                                    </a>
-                                                </li>
-                                                <li class="active"><a href="#" >1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#">5</a></li>
-                                                <li>
-                                                    <a href="#" aria-label="Next">
-                                                        <span aria-hidden="true">&raquo;</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-
-                                <div align="right" style="margin: 5px">
-                                    <button type="button" class="btn btn-info">结算收益</button>
-                                </div>
-                            </li>
-                            <li class="item-show">
-                                <!--
-                                    类型	标题	作者	日期	阅读	删除
-                                -->
-                                <table class="table table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th scope="row">#</th>
-                                        <th>类型</th>
-                                        <th>标题</th>
-                                        <th>作者</th>
-                                        <th>日期</th>
-                                        <th>阅读</th>
-                                        <th>删除</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>博客</td>
-                                        <td>spring学习笔记</td>
-                                        <td>godx</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>12</td>
-                                        <td><a href="#">删除</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>博客</td>
-                                        <td>spring学习笔记</td>
-                                        <td>godx</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>12</td>
-                                        <td><a href="#">删除</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>博客</td>
-                                        <td>spring学习笔记</td>
-                                        <td>godx</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>12</td>
-                                        <td><a href="#">删除</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>博客</td>
-                                        <td>spring学习笔记</td>
-                                        <td>godx</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>12</td>
-                                        <td><a href="#">删除</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>博客</td>
-                                        <td>spring学习笔记</td>
-                                        <td>godx</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>12</td>
-                                        <td><a href="#">删除</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>博客</td>
-                                        <td>spring学习笔记</td>
-                                        <td>godx</td>
-                                        <td>2022-04-02 10:23:00</td>
-                                        <td>12</td>
-                                        <td><a href="#">删除</a></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
-                                <div align="right">
-                                    <nav aria-label="Page navigation">
-                                        <ul class="pagination" style="margin-right: 5px">
-                                            <li>
-                                                <a href="#" aria-label="Previous">
-                                                    <span aria-hidden="true">&laquo;</span>
-                                                </a>
-                                            </li>
-                                            <li class="active"><a href="#" >1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li>
-                                                <a href="#" aria-label="Next">
-                                                    <span aria-hidden="true">&raquo;</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </li>
-                            <!-- 只对本人开放 -->
-                            <li class="item-show">粉丝 内容</li>
-                            <li class="item-show">关注 内容</li>
-                            <li class="item-show">通知 内容</li>
-
                         </ul>
 
                     </section>
+                    <!-- 点赞，喜欢 -->
+                    <span class="love">
+                        <a href=""><span class="glyphicon glyphicon-heart-empty"></span></a>
+                    </span>
+                    <!-- 收藏 -->
+                    <span class="collection">
+                        <a href=""><span class="glyphicon glyphicon-star-empty"></span></a>
+                    </span>
+                </div>
+            </div>
+            <div class="fa-comment-sub">
+                <div align="left" class="comment-sum">2 条评论</div>
+                <hr>
+                <textarea class="form-control" rows="3"></textarea>
+                <div align="right"><button type="button" class="btn btn-info" style="margin-top: 20px;margin-bottom: 20px">提交评论</button></div>
+                <hr>
+                <!-- 评论展示区域 -->
+                <div class="comment-show">
+                    <!-- 这是一条评论 -->
+                    <!-- 主楼 -->
+                    <div id="comment_186184" style="">
+                        <div class="row" style="box-shadow: 0 0 10px lightgray;">
+                            <div class="col-md-1"  style="max-width: 60px;">
+                                <a href = "">
+                                    <img class="img-circle" src="./images/xue.png" alt="用户头像" width="45px">
+                                </a>
+                            </div>
+                            <div class="col-md-11">
+
+                                <div>
+                                    <a href="" style="font-size: 15px;">
+                                        walter_0
+                                    </a>
+                                    &nbsp;
+                                    <span class="comment-title" title="2022-02-15 22:25">1个月前</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a id="comment_reply_btn_186184" class="review-comment">回复</a>
+
+                                </div>
+                                <div id="comment_content_186184">
+                                    评论内容
+                                </div>
+                                <div class="review-comment-show" style="display: none">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                    <div align="right"><button type="button" class="btn btn-info" style="margin-top: 20px;margin-bottom: 20px">提交回复</button></div>
+                                </div>
+                                <!-- 附楼 -->
+                                <div id="comment_186185" style="margin: 5px 0">
+                                    <div class="row">
+                                        <div class="col-md-1"  style="max-width: 60px;">
+                                            <a href = "">
+                                                <img class="img-circle" src="./images/xue.png" alt="用户头像" width="45px">
+                                            </a>
+                                        </div>
+                                        <div class="col-md-11">
+
+                                            <div>
+                                                <a href="" style="font-size: 15px;">
+                                                    用户名
+                                                </a>
+                                                &nbsp;
+                                                <span class="comment-title" title="2022-02-15 22:25">1个月前</span>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <span>回复了xxx的评论</span>
+                                                <a id="comment_reply_btn_186185" class="review-comment-2">回复</a>
+
+                                            </div>
+                                            <div id="comment_content_186185">
+                                                评论内容
+                                            </div>
+                                            <div class="review-comment-show-2" style="display: none">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                <div align="right"><button type="button" class="btn btn-info" style="margin-top: 20px;margin-bottom: 20px">提交回复</button></div>
+                                            </div>
+                                            <script>
+                                                $(".review-comment-2").click(function () {
+                                                    if($(".review-comment-show-2").css("display") == "none"){
+                                                        $(".review-comment-show-2").css("display","block");
+                                                        $(".review-comment-2").html("收起");
+                                                    }else {
+                                                        $(".review-comment-show-2").css("display","none");
+                                                        $(".review-comment-2").html("回复");
+                                                    }
+                                                })
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 附楼2 -->
+                                <div id="comment_186186" style="margin: 5px 0">
+                                    <div class="row">
+                                        <div class="col-md-1"  style="max-width: 60px;">
+                                            <a href = "">
+                                                <img class="img-circle" src="./images/xue.png" alt="用户头像" width="45px">
+                                            </a>
+                                        </div>
+                                        <div class="col-md-11">
+
+                                            <div>
+                                                <a href="" style="font-size: 15px;">
+                                                    用户名
+                                                </a>
+                                                &nbsp;
+                                                <span class="comment-title" title="2022-02-15 22:25">1个月前</span>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <span>回复了xxx的评论</span>
+                                                <a id="comment_reply_btn_186186" class="review-comment-3">回复</a>
+
+                                            </div>
+                                            <div id="comment_content_186186">
+                                                评论内容
+                                            </div>
+                                            <div class="review-comment-show-3" style="display: none">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                                <div align="right"><button type="button" class="btn btn-info" style="margin-top: 20px;margin-bottom: 20px">提交回复</button></div>
+                                            </div>
+                                            <script>
+                                                $(".review-comment-3").click(function () {
+                                                    if($(".review-comment-show-3").css("display") == "none"){
+                                                        $(".review-comment-show-3").css("display","block");
+                                                        $(".review-comment-3").html("收起");
+                                                    }else {
+                                                        $(".review-comment-show-3").css("display","none");
+                                                        $(".review-comment-3").html("回复");
+                                                    }
+                                                })
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    $(".review-comment").click(function () {
+                                        if($(".review-comment-show").css("display") == "none"){
+                                            $(".review-comment-show").css("display","block");
+                                            $(".review-comment").html("收起");
+                                        }else {
+                                            $(".review-comment-show").css("display","none");
+                                            $(".review-comment").html("回复");
+                                        }
+                                    })
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        $(document).ready(function () {
+                            let math_elemtnt = document.getElementById("comment_content_186184");
+
+                        });
+                    </script>
                 </div>
             </div>
         </section>
@@ -625,7 +340,6 @@ public class Monkey {
 
         <script type="text/javascript">
             $(function() {
-                /* foreach 遍历循环即可 */
                     $.get("./test.md", function(markdown) {
                             editormd.markdownToHTML("editormd-view-1", {
                                 markdown        : markdown ,
@@ -637,31 +351,8 @@ public class Monkey {
                                 flowChart       : true,
                                 sequenceDiagram : true,
                             });
-                        editormd.markdownToHTML("editormd-view-2", {
-                            markdown        : markdown ,
-                            htmlDecode      : "style,script,iframe",
-                            tocm            : true,
-                            emoji           : true,
-                            taskList        : true,
-                            tex             : true,
-                            flowChart       : true,
-                            sequenceDiagram : true,
-                        });
                     });
             });
-            $(".item-click").each(function (index,value) {
-                console.log(value);
-                $(value).click(function () {
-                    $(".item-show").each(function (j,val) {
-                        console.log($(val).css("display"));
-                        if(index != j){
-                            $(val).css("display","none");
-                        }else {
-                            $(val).css("display","block");
-                        }
-                    })
-                })
-            })
         </script>
     </body>
 </html>
