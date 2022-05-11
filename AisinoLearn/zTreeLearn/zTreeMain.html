@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- jQ -->
+    <script src="js/jquery.js" />
+    <!-- zTree css文件 -->
+    <link href="zTree_v3/css/zTreeStyle/zTreeStyle.css" />
+    <!-- zTree  js文件-->
+    <script type="text/javascript" src="zTree_v3/js/jquery.ztree.core.js" />
+    <script>
+        alert(222);
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="content_box">
+            <div class="infolist">
+                <div style="float: left;width: 16%;height: 480px;border:1px solid #e3e3e3;overflow-y:scroll;">
+                    <ul id="tree" class="ztree"></ul>
+                </div>
+                <div style="float: left;width: 83%;height: 530px;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    alert(111);
+    //Ztree
+    var setting = {
+        data: {
+            simpleData: {
+                enable: true
+            },
+            //自定义title信息，需要指定title对应数据显示的字段，然后从后台传递相应的字段
+            key: {
+                title: "description"
+            }
+        },
+        callback:{
+            onClick: zTreeOnClick,
+            onDblClick: zTreeOnDblClick
+        },
+        async: { // 当点击展开树节点时，才去请求后台返回点击节点的子节点数据并加载
+            dataType:"json",
+            enable: true,
+            type:"post",
+            autoParam:["bm"],
+            url:"/handle/soHeaderManage/listClassCodeChildrenTree"
+        }
+    };
+    var zNodes ;
+    $(function() {
+        //查询税收分类编码父类ztree
+        zNodes = {"children":[{"isParent":true,"name":"货物","description":"1","bm":"1","open":false},{"isParent":true,"name":"劳务","description":"2","bm":"2","open":false},{"isParent":true,"name":"销售服务","description":"3","bm":"3","open":false},{"isParent":true,"name":"无形资产","description":"4","bm":"4","open":false},{"isParent":true,"name":"不动产","description":"5","bm":"5","open":false},{"isParent":true,"name":"未发生销售行为的不征税项目","description":"6","bm":"6","open":false}],"name":"税收分类编码","description":"","bm":"","open":true};   //把后台封装好的简单Json格式赋给treeNodes
+        $.fn.zTree.init($("#tree"), setting, zNodes);
+    });
+
+    //树节点双击事件
+    function zTreeOnDblClick(event, treeId, treeNode) {
+        var bm=treeNode.bm;
+        refreshIFrame(bm);
+    };
+
+
+    //树节点单击事件
+    function zTreeOnClick(event, treeId, treeNode) {
+        var bm=treeNode.bm;
+        refreshIFrame(bm);
+    };
+
+    //刷新IFRAME子页面
+    function refreshIFrame(bm) {
+        $('#listFrame').contents().find("#bm").val(bm);
+        $('#listFrame')[0].contentWindow.refresh();
+    }
+
+</script>

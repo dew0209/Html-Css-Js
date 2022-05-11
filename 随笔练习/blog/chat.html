@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>拖动模态框</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
     <style>
         .chat-header {
             position: fixed;
@@ -56,54 +59,163 @@
             background-color: #ECEAE9;
             border-bottom: lightgrey solid 1px;
         }
+        .chat-mess {
+            border-bottom: lightgrey solid 1px;
+        }
         .chat-index {
             float: right;
             width: 70%;
             height: 440px;
             background-color: transparent;
         }
+        .chat-avatar {
+            width: 40px;
+            height: 40px;
+        }
+        .chat-avatar img {
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+        }
+        .chat-name,.chat-sign {
+            margin-left: 90px;
+        }
+        .chat-name {
+            font-size: 20px;
+        }
+        .chat-sign {
+            font-size: 10px;
+        }
+        .chat-lianxiren .list-group-item:hover {
+            background-color: #337ab7;
+        }
+        .chat-body {
+            text-align: center;
+        }
+        .chat-lianxiren img {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+        }
+        .chat-body li{
+            float: left;
+            display: none;
+        }
+        .show-area {
+            width: 598px;
+            height: 300px;
+            border: lightgrey solid 1px;
+            margin-bottom: -1px;
+        }
+
     </style>
 </head>
 <body>
     <div class="chat-header">
-        <a href="javascript:;" id="link">
+        <a href="javascript:;" id="chat-link">
             <img src="images/chat.png" alt="">
         </a>
     </div>
     <div class="chat-fa" id="chat-fa">
-        <div id="title" class="chat-colse" style="position:relative;">
+        <div id="chat-title" class="chat-colse" style="position:relative;">
             <span>chat</span>
-            <span style="position: absolute;right: 0"><a id="closeBtn" href="javascript:void(0);" class="close-btn">关闭</a></span>
+            <span style="position: absolute;right: 0"><a id="chat-closeBtn" href="javascript:void(0);" class="close-btn">关闭</a></span>
         </div>
         <div class="chat-people">
-            联系人窗口
+            <div class="chat-mess">
+                <div class="chat-avatar" style="float:left;">
+                    <img src="images/yui.png" alt="">
+                </div>
+                <div class="chat-name">godx</div>
+                <div class="chat-sign">太难了啊</div>
+            </div>
+            <div class="chat-lianxiren">
+                <ul class="list-group">
+                    <li class="list-group-item chat-click">
+                        <img src="images/yui.png" alt="">
+                        <span style="margin-left: 10px">张三</span>
+                    </li>
+                    <li class="list-group-item chat-click">
+                        <img src="images/yui.png" alt="">
+                        <span style="margin-left: 10px">李四</span>
+                    </li>
+                    <li class="list-group-item chat-click">
+                        <img src="images/yui.png" alt="">
+                        <span style="margin-left: 10px">王二</span>
+                    </li>
+                    <li class="list-group-item chat-click">
+                        <img src="images/yui.png" alt="">
+                        <span style="margin-left: 10px">赵虎</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="chat-index">聊天窗口</div>
+        <div class="chat-index">
+
+            <div class="chat-body">
+                <ul class="list-group">
+                    <li class="list-group-item chat-show">
+                        <div class="show-area">张三的会话内容</div>
+                        <textarea class="form-control" rows="3"></textarea>
+                        <button type="button" class="btn btn-info">发送</button>
+                    </li>
+                    <li class="list-group-item chat-show">
+                        <div class="show-area">李四的会话内容</div>
+                        <textarea class="form-control" rows="3"></textarea>
+                        <button type="button" class="btn btn-info">发送</button>
+                    </li>
+                    <li class="list-group-item chat-show">
+                        <div class="show-area">王二的会话内容</div>
+                        <textarea class="form-control" rows="3"></textarea>
+                        <button type="button" class="btn btn-info">发送</button>
+                    </li>
+                    <li class="list-group-item chat-show">
+                        <div class="show-area">赵虎的会话内容</div>
+                        <textarea class="form-control" rows="3"></textarea>
+                        <button type="button" class="btn btn-info">发送</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 </body>
 <script>
-    var login = document.querySelector('.chat-fa');
-    var link = document.querySelector('#link');
-    var closeBtn = document.querySelector('#closeBtn');
-    var title = document.querySelector('#title');
-    link.addEventListener('click',function () {
-        login.style.display = 'block';
+    var chatFa = document.querySelector('.chat-fa');
+    var chatLink = document.querySelector('#chat-link');
+    var chatCloseBtn = document.querySelector('#chat-closeBtn');
+    var chatTitle = document.querySelector('#chat-title');
+    chatLink.addEventListener('click',function () {
+        chatFa.style.display = 'block';
     });
-    closeBtn.addEventListener('click',function () {
-        login.style.display = 'none';
+    chatCloseBtn.addEventListener('click',function () {
+        chatFa.style.display = 'none';
     });
-    title.addEventListener('mousedown',function (e) {
-        var x = e.pageX - login.offsetLeft;
-        var y = e.pageY - login.offsetTop;
+    chatTitle.addEventListener('mousedown',function (e) {
+        var x = e.pageX - chatFa.offsetLeft;
+        var y = e.pageY - chatFa.offsetTop;
         function move(e) {
-            login.style.left = e.pageX - x + 'px';
-            login.style.top = e.pageY - y + 'px';
+            chatFa.style.left = e.pageX - x + 'px';
+            chatFa.style.top = e.pageY - y + 'px';
         }
         document.addEventListener('mousemove',move);
         document.addEventListener('mouseup',function (e) {
             document.removeEventListener('mousemove',move);
         });
+    });
+    $(".chat-click").each(function (index,value) {
+
+        $(value).click(function () {
+            console.log(value);
+            $(".chat-show").each(function (j,val) {
+                console.log($(val).css("display"));
+                if(index != j){
+                    $(val).css("display","none");
+                }else {
+                    $(val).css("display","block");
+                }
+            })
+        })
     });
 </script>
 </html>
