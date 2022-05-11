@@ -1,83 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <!-- jQ -->
-    <script src="js/jquery.js" />
-    <!-- zTree css文件 -->
-    <link href="zTree_v3/css/zTreeStyle/zTreeStyle.css" />
-    <!-- zTree  js文件-->
-    <script type="text/javascript" src="zTree_v3/js/jquery.ztree.core.js" />
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="js/jquery.js"></script>
+        <link rel="stylesheet" href="zTree_v3/css/zTreeStyle/zTreeStyle.css" />
+        <link rel="stylesheet" href="zTree_v3/css/demo.css" />
+        <script type="text/javascript" src="zTree_v3/js/jquery.ztree.core.min.js"></script>
+    </head>
+    <body>
+
+            <ul id="treeDemo" class="ztree"></ul>
+
+    </body>
+
     <script>
-        alert(222);
-    </script>
-</head>
-<body>
-    <div class="content">
-        <div class="content_box">
-            <div class="infolist">
-                <div style="float: left;width: 16%;height: 480px;border:1px solid #e3e3e3;overflow-y:scroll;">
-                    <ul id="tree" class="ztree"></ul>
-                </div>
-                <div style="float: left;width: 83%;height: 530px;">
-
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-
-<script>
-    alert(111);
-    //Ztree
-    var setting = {
-        data: {
-            simpleData: {
-                enable: true
-            },
-            //自定义title信息，需要指定title对应数据显示的字段，然后从后台传递相应的字段
-            key: {
-                title: "description"
+        var setting = {
+            data: {
+                simpleData: {
+                    enable: true
+                }
             }
-        },
-        callback:{
-            onClick: zTreeOnClick,
-            onDblClick: zTreeOnDblClick
-        },
-        async: { // 当点击展开树节点时，才去请求后台返回点击节点的子节点数据并加载
-            dataType:"json",
-            enable: true,
-            type:"post",
-            autoParam:["bm"],
-            url:"/handle/soHeaderManage/listClassCodeChildrenTree"
-        }
-    };
-    var zNodes ;
-    $(function() {
-        //查询税收分类编码父类ztree
-        zNodes = {"children":[{"isParent":true,"name":"货物","description":"1","bm":"1","open":false},{"isParent":true,"name":"劳务","description":"2","bm":"2","open":false},{"isParent":true,"name":"销售服务","description":"3","bm":"3","open":false},{"isParent":true,"name":"无形资产","description":"4","bm":"4","open":false},{"isParent":true,"name":"不动产","description":"5","bm":"5","open":false},{"isParent":true,"name":"未发生销售行为的不征税项目","description":"6","bm":"6","open":false}],"name":"税收分类编码","description":"","bm":"","open":true};   //把后台封装好的简单Json格式赋给treeNodes
-        $.fn.zTree.init($("#tree"), setting, zNodes);
-    });
+        };
 
-    //树节点双击事件
-    function zTreeOnDblClick(event, treeId, treeNode) {
-        var bm=treeNode.bm;
-        refreshIFrame(bm);
-    };
+        var zNodes =[
+            { id:1, pId:0, name:"父节点1 - 展开", open:true},
+            { id:11, pId:1, name:"父节点11 - 折叠"},
+            { id:111, pId:11, name:"叶子节点111"},
+            { id:112, pId:11, name:"叶子节点112"},
+            { id:113, pId:11, name:"叶子节点113"},
+            { id:114, pId:11, name:"叶子节点114"},
+            { id:12, pId:1, name:"父节点12 - 折叠"},
+            { id:121, pId:12, name:"叶子节点121"},
+            { id:122, pId:12, name:"叶子节点122"},
+            { id:123, pId:12, name:"叶子节点123"},
+            { id:124, pId:12, name:"叶子节点124"},
+            { id:13, pId:1, name:"父节点13 - 没有子节点", isParent:true},
+            { id:2, pId:0, name:"父节点2 - 折叠"},
+            { id:21, pId:2, name:"父节点21 - 展开", open:true},
+            { id:211, pId:21, name:"叶子节点211"},
+            { id:212, pId:21, name:"叶子节点212"},
+            { id:213, pId:21, name:"叶子节点213"},
+            { id:214, pId:21, name:"叶子节点214"},
+            { id:22, pId:2, name:"父节点22 - 折叠"},
+            { id:221, pId:22, name:"叶子节点221"},
+            { id:222, pId:22, name:"叶子节点222"},
+            { id:223, pId:22, name:"叶子节点223"},
+            { id:224, pId:22, name:"叶子节点224"},
+            { id:23, pId:2, name:"父节点23 - 折叠"},
+            { id:231, pId:23, name:"叶子节点231"},
+            { id:232, pId:23, name:"叶子节点232"},
+            { id:233, pId:23, name:"叶子节点233"},
+            { id:234, pId:23, name:"叶子节点234"},
+            { id:3, pId:0, name:"父节点3 - 没有子节点", isParent:true}
+        ];
 
-
-    //树节点单击事件
-    function zTreeOnClick(event, treeId, treeNode) {
-        var bm=treeNode.bm;
-        refreshIFrame(bm);
-    };
-
-    //刷新IFRAME子页面
-    function refreshIFrame(bm) {
-        $('#listFrame').contents().find("#bm").val(bm);
-        $('#listFrame')[0].contentWindow.refresh();
-    }
-
-</script>
+        $(document).ready(function(){
+            $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        });
+    </script>
+</html>
