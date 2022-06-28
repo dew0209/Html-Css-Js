@@ -8,9 +8,30 @@
     <link rel="stylesheet" href="css/loginSection.css">
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
+
+    <script src="js/cropper.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .info-up .info-left {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin-right: 50px;
+            background-color: black;
+        }
+        .info-up {
+            margin: 0 400px;
+            margin-top: 40px;
+        }
+        .info-up .info-right {
+            float: right;
+            width: 800px;
+            height: 600px;
+            background-color: pink;
+        }
+    </style>
 </head>
 <body>
-    <button disabled="disabled">按钮</button>
     <!--导航条 -->
     <nav class="navbtn w navbar navbar-default">
         <div class="container-fluid">
@@ -116,6 +137,14 @@
     <section>
         <div id="bg" class="login-bg"></div>
     </section>
+    <section>
+        <div class="info-up">
+            <section class="info-left">
+                <img src="images/yui.png" alt="" class="info-left-img">
+            </section>
+            <section class="info-right">信息区域</section>
+        </div>
+    </section>
 </body>
 <style>
 
@@ -148,5 +177,12 @@
         loginSection.style.display = 'none';
         mask.style.display = 'none';
     })
+
+    $('.info-left > .info-left-img').cropper({
+
+        crop: function(data) {
+            // 出来裁切后的图片数据.
+        }
+    });
 </script>
 </html>

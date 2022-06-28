@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A complete example of Cropper.">
+  <meta name="keywords" content="HTML, CSS, JS, JavaScript, jQuery, PHP, image cropping, web development">
+  <meta name="author" content="Fengyuan Chen">
+  <title>Crop Avatar - Cropper</title>
+
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/cropper.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container" id="crop-avatar">
+
+    <!-- Current avatar -->
+    <div class="avatar-view" title="Change the avatar">
+      <img src="img/picture.jpg" alt="Avatar">
+    </div>
+
+    <!-- Cropping modal -->
+    <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form class="avatar-form" action="/upload/1" enctype="multipart/form-data" method="post">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal" type="button">&times;</button>
+              <h4 class="modal-title" id="avatar-modal-label">修改头像</h4>
+            </div>
+            <div class="modal-body">
+              <div class="avatar-body">
+
+                <!-- Upload image and data -->
+                <div class="avatar-upload">
+                  <input class="avatar-src" name="avatar_src" type="hidden">
+                  <input class="avatar-data" name="avatar_data" type="hidden">
+                  <label for="avatarInput">Local upload</label>
+                  <input class="avatar-input" id="avatarInput" name="avatar_file" type="file">
+                </div>
+
+                <!-- Crop and preview -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="avatar-wrapper"></div>
+                  </div>
+
+                </div>
+
+                <div class="row avatar-btns">
+
+                  <div class="col-md-3">
+                    <button class="btn btn-primary btn-block avatar-save" type="submit">Done</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div><!-- /.modal -->
+
+    <!-- Loading state -->
+    <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+  </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/cropper.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
