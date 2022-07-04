@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+        img标签：定义HTML页面中的图像
+            <img src = "图像URL" />
+            src：文本，必须，图像URL
+            alt：文本，图片无法获取时，替换的文字
+            title：文本，提示，鼠标放在上面
+            width：像素，宽度，设置其中一个，另一个会等比例缩放
+            height：像素，高度，设置其中一个，另一个会等比例缩放
+            border：像素，边框粗细
+            注意：
+                1.图像标签可以拥有多个属性，必须写在标签名的后面
+                2.属性之间不分先后顺序，标签名与属性，属性与属性之间均已空格分开
+                3.属性采取键值对的格式，即key = "value"，属性 = "属性值"
+         相对路径：图片相对于HTML页面的位置
+                1.  或者./ 同一级
+                2. /       下一级
+                3. ../     上一级
+         绝对路径：带盘符的或者完整的网络地址
+    -->
+    <h4>图像标签的使用：</h4>
+    <img src="images/img.jpg" alt="我是pink老师" />
+    <h4>图像标签的使用，图像显示不出来的时候用alt替换：</h4>
+    <img src="images/img1.jpg" alt="我是pink老师" />
+    <h4>图像标签的使用，鼠标放在上面的时候的提示文本title：</h4>
+    <img src="images/img.jpg" alt="我是pink老师" title="我喜欢粉色" />
+    <h4>图像标签的使用，width设置宽度：</h4>
+    <img src="images/img.jpg" alt="我是pink老师" title="我喜欢粉色" width="500px" />
+    <h4>图像标签的使用，height设置高度：</h4>
+    <img src="images/img.jpg" alt="我是pink老师" title="我喜欢粉色" height="100px" />
+    <h4>图像标签的使用，border设置边框：</h4>
+    <img src="images/img.jpg" alt="我是pink老师" title="我喜欢粉色" height="100px" border="15px" />
+    <h4>绝对路径：</h4>
+    <img src="D:\workspace\workspaceideaj\Html-Css-Js\re-html\day01\images\img.jpg" alt="">
+</body>
+</html>
