@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+        使用表单目的是为了收集用户信息
+        组成：表单域（整个表单form） + 表单控件（input等） + 提示信息（姓名。年龄等提示文字）
+        表单域：
+            是一个包含表单元素的区域
+            form标签用于定义表单域，以实现用户信息的收集和传递
+            form会把它范围内的表单元素信息提交给服务器
+         <form action="url地址" method="提交方式" name="表单域名称">
+            各种表单元素控件
+         </form>
+         url：用于指定接收并处理表单数据的服务器程序的url地址
+         get/post：用于设置表单数据的提交方式，其取值为get或post
+         name：用于指定表单的名称，以区分同一个页面中的多个表单域
+         表单控件：
+            input：输入框，收集用户信息
+                <input type="" />
+                1.单标签
+                2.type必须，type属性设置不同的属性值用来指定不同的控件类型。button checkbox file hidden image password radio reset submit text
+                3.name：定义input元素名称
+                4.value：规定input元素的值，这个其实就是送到后台的值
+                5.checked：规定此input元素首次加载时应该被选中
+                6.maxlength：规定输入字段中的字符的最大长度
+                注意：
+                    1.name和value是每个表单都有的属性值，主要给后台人员使用
+                    2.name表单元素的名字，要求单选按钮和复选按钮要有相同的name值
+                    3.checked属性主要针对于单选框和复选框，主要作用是一打开页面，就可以默认选中某个表单元素
+                    4.maxlength是用户可以在表单元素输入的最大字符数，一般较少使用
+    -->
+    <form action="/login" method="get" name="name1">
+        <!-- text文本框，用户可以在里面输入任何文字 -->
+        用户名：<input type="text" name="username" value="请输入用户名" maxlength="6"> <br>
+        <!-- password密码框，用户看不见输入的密码 -->
+        密码：<input type="password" name="password"> <br>
+        <!-- radio单选按钮，可以实现多选一 -->
+        <!-- name是表单元素名字，这里性别单选按钮必须有相同的名字name，才可以实现多选一 -->
+        <!-- 单选框和复选框可以设置checked属性，当页面打开的时候就可以默认选中这个按钮 -->
+        性别：男 <input type="radio" name="sex" value="男" checked> 女 <input type="radio" name="sex" value="女"> <br>
+        <!-- checkbox复选框，可以实现多选 -->
+        爱好：吃饭 <input type="checkbox" name="hobby" value="吃饭" checked> 睡觉 <input type="checkbox" name="hobby" value="睡觉"> 打豆豆 <input type="checkbox" name="hobby" value="打豆豆"> <br>
+        <!-- submit定义提交按钮，提交按钮会把整个表单数据发送到服务器 -->
+        <input type="submit" value="免费注册">
+        <!-- reset重置按钮，可以还原表单元素初始的默认状态 -->
+        <input type="reset" value="重新填写">
+        <!-- 普通按钮button，后期结合js搭配使用 -->
+        <input type="button" value="获取短信验证码"> <br>
+        <!-- 文件域，上传文件使用的 -->
+        上传头像：<input type="file">
+    </form>
+</body>
+</html>
