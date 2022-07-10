@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+        rel="stylesheet"：表示被引入文件是一个样式表
+    -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .first {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        三种引入方式
+        1.行内样式表（行内式）
+            <div style="color: red">行内</div>
+            用于修改简单样式，控制当前标签
+        2.内部样式表（嵌入式）
+            专门放到一个style标签里面
+            整个页面都可以作用到，控制整个页面
+        3.外部样式表（链接式）
+            <link rel="stylesheet" href="css/style.css">
+            适合样式比较多的情况下
+    -->
+    <div style="color: red">行内样式表</div>
+    <div class="first">内部样式表</div>
+    <div class="third">外部样式表</div>
+</body>
+</html>

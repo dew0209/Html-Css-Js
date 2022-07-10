@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h2 {
+            font-family: 'Microsoft YaHei';
+        }
+        p {
+            font-family: 'Microsoft YaHei',Arial;
+            font-size: 20px;
+        }
+        .bold {
+            font-weight: 700;/* 不要接单位，700相当于加粗。400正常 */
+        }
+        h2 {
+            font-weight: 400;
+        }
+        .student {
+            font-style: italic;
+        }
+        em {
+            font-style: normal;
+        }
+        div {
+            /*font-style: italic;
+            font-weight: 700;
+            font-size: 16px;
+            font-family: 'Microsoft YaHei';*/
+            /*font: italic 700 16px 'Microsoft YaHei';*/
+            font: 20px 'Microsoft YaHei';
+        }
+    </style>
+</head>
+<body>
+    <!--
+        css fonts属性用于定义字体系列，大小，粗细，和文字样式等
+        font-family：字体系列
+        特点：
+            1.各种字体之间必须使用英文状态下的逗号隔开
+            2.一般情况下，如果有空格隔开的多个单词组成的字体，加引号
+            3.尽量使用系统默认自带字体，保证在任何用户的浏览器中都能够正确显示
+        font-size：字体大小
+        特点：
+            1.px（像素）大小是我们网页的最常用的单位
+            2.谷歌浏览器默认的文字大小为16px
+            3.不同的浏览器可能默认显示的字号大小不一致，我们尽量使用一个明确值大小，不要默认大小
+            4.可以给body指定整个页面文字的大小
+        font-weight：字体粗细
+        特点：
+            1.normal：默认值（不加粗的）
+            2.bold：定义粗体（加粗的）
+            3.100~900：400normal，700bold，注意不要接单位
+            4.学会让加粗标签不加粗，或者其他标签加粗
+            5.实际开发时，我们更喜欢用数字表示粗细
+        font-style：文字样式
+        特点：
+            1.normal：默认值
+            2.italic：斜体
+            3.平时我们很少给为文字加斜体，反而要给斜体标签(em,i)改为不倾斜字体
+        font：复合写法
+            font：font-style font-weight font-size/line-height font-family;
+        特点：
+            1.使用font属性时，必须按照上面语法格式中的顺序进行书写，不能更换顺序，并且各个属性间以空格隔开
+            2.不需要设置的属性可以省略（取默认值），但必须保留font-size和font-family属性，否则font属性将不起作用
+
+    -->
+    <h2>pink的秘密</h2>
+    <p>1</p>
+    <p>2</p>
+    <p class="bold">拼死也要克服它</p>
+    <p>4</p>
+    <p class="student">同学，上课时候的你</p>
+    <em>同学，下课时候的你</em>
+    <div>三生三世十里桃花，一心一意百行代码</div>
+</body>
+</html>
