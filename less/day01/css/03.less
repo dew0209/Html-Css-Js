@@ -1,0 +1,36 @@
+
+@m:margin;
+@color:pink;
+@selector:#wrap;
+* {
+  @{m}: 0;
+  padding: 0;
+}
+@{selector} {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 1px solid;
+  margin: 0 auto;
+  .inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: @color;//使用color
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@var:1;
+.class {
+  .brass {
+    @var:2;
+    three:@var; //3 等到全部加载完成再进行值的改变
+    @var:3;
+  }
+  one:@var; //1
+}

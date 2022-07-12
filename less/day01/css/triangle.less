@@ -1,0 +1,22 @@
+.triangle(@_,@www,@ccc) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+//匹配模式：L R T B
+.triangle(L,@w,@c) {
+  border-width: @w;
+  border-color: transparent @c transparent transparent;
+}
+.triangle(R,@w,@c) {
+  border-width: @w;
+  border-color: transparent transparent transparent @c;
+}
+.triangle(T,@w,@c) {
+  border-width: @w;
+  border-color: transparent transparent @c transparent;
+}
+.triangle(B,@w,@c) {
+  border-width: @w;
+  border-color: @c transparent transparent transparent;
+}

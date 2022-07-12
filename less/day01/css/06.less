@@ -1,0 +1,29 @@
+.juzhong(@w:10px,@h:20px,@c:red) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: @c;
+  height: @h;
+  width: @w;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#wrap {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border: 1px solid;
+  margin: 0 auto;
+  .inner {
+    .juzhong(100px,100px,pink)
+  }
+  .inner2 {
+    //命名参数
+    .juzhong(@c:black)
+  }
+}
