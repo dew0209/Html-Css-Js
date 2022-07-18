@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            height: 200px;
+            background-color: pink;
+        }
+        span {
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+        }
+        input {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        元素的显示模式：
+            元素显示模式就是元素（标签）以什么方式进行显示，比如div自己占一行，比如一行可以放多个span
+            HTML元素一般分为块元素和行内元素两种类型
+            块级元素：
+                特点：
+                    1.比较霸道，自己独占一行
+                    2.高度，宽度，外边距以及内边距都可以控制
+                    3.宽度默认是容器（父级宽度）的100%
+                    4.是一个容器及盒子，里面可以放行内或者块级元素
+                 注意：
+                    1.文字类的元素内不能使用块级元素
+                    2.p标签主要用于存放文字，因此p里面不能放块级元素，特别不能放div
+                    3.同理，h1~h6等都是文字类块级标签，里面也不能放其他块级元素
+            行内元素：a  strong  b   em  i   del     s       ins     u       span等等
+                 特点：
+                    1.相邻行内元素再一行上，一行可以显示多个
+                    2.高，宽直接设置是无效的
+                    3.默认宽度就是它本身内容的宽度
+                    4.行内元素只能容纳文本或者其他行内元素
+                 注意：
+                    1.链接里面不能放链接，但是可以放其他块级元素，此时给a转换一下块级模式最安全
+
+            行内块元素：img input td，它们同时具有块元素和行内元素的特点
+                 特点：
+                    1.和相邻行内元素（行内元素特点）再一行上，但是它们之间会有空白间隙。一行可以显示多个（行内元素特点）
+                    2.默认宽度就是它本身内容的宽度
+                    3.高度，行高，外边距以及内边距都可以控制（块级元素特点）
+
+    -->
+    <div>比较霸道，自己独占一行</div>瑟瑟发抖
+    <p>
+        <div>这里有问题</div>
+    </p>
+    <span>pink老师你怎么穿着</span><strong>品如的衣服</strong>
+    <span>pink老师</span><strong>品如的衣服</strong>
+    <input type="text"><input type="text">
+</body>
+</html>
