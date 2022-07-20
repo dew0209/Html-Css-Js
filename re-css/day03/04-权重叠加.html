@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 并不是二进制，不会有进位的问题（注意注意，即使超过10，0 0 0 11显示等等） */
+        /* 0 0 0 2 */
+        ul li {
+            color: green;
+        }
+        /* 0 0 0 1 */
+        li {
+            color: red;
+        }
+        /* 0 0 1 1 */
+        .nav li{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        复合选择器会有权重叠加的问题
+    -->
+    <ul class="nav">
+        <li>大猪蹄子</li>
+        <li>大肘子</li>
+        <li>猪尾巴</li>
+    </ul>
+</body>
+</html>

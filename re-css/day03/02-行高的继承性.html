@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            color: pink;
+            font: 12px/1.5 'Microsoft YaHei';
+        }
+        div {
+            /* 当前行高14 * 1.5 = 21 */
+            font-size: 14px;
+        }
+        p {
+            /* 当前行高16 * 1.5 = 24 */
+            font-size: 16px;
+        }
+        /* li会继承父元素文字大小，12px，行高为12 * 1.5 = 18px */
+    </style>
+</head>
+<body>
+    <!--
+        行高可以不接单位，1.5代表当前元素的1.5倍大小
+        如果子元素没有设置行高，则会继承父元素的行高为1.5
+        此时子元素的行高是：当前子元素的文字大小*1.5
+        body行高1.5这样写法最大的优势就是里面子元素可以根据自己文字大小自动调整行高
+    -->
+    <div>粉红色的回忆</div>
+    <p>粉红色的回忆</p>
+    <ul>
+        <li>我没有指定文字大小</li>
+    </ul>
+</body>
+</html>

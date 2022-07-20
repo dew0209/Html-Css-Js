@@ -7,12 +7,8 @@
         div {
             width: 300px;
             height: 300px;
-            background-color: pink;
-            /* 不要落下url */
-            background-image: url("images/logo.png");
-            background-repeat: no-repeat;
-            background-position: 20px,center;
-            background-attachment: ;
+            /* scroll换成fixed有bug问题，不知道是怎么了 */
+            background: pink url("images/logo.png") no-repeat scroll 20px center;
         }
     </style>
 </head>
@@ -52,7 +48,11 @@
               background-attachment:scroll | fixed
               scroll:背景图像随着内容滚顶
               fixed：背景图像固定
-
+          背景属性复合写法：
+              为了节约代码，我们可以将这些属性合并简写在同一个属性background中。从而节约代码量
+              一般定义的顺序为：
+                background：背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置;
+          背景图片：实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片，优点是便于控制
     -->
     <div></div>
 </body>

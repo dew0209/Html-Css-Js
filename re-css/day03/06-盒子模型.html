@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            /*border-width: 5px;*/
+            /* solid：实线 dashed：虚线 dotted：点线 */
+            /*border-style: solid;
+            border-color: pink;*/
+            /* 复合写法，没有顺序要求 */
+            border: 5px solid pink;
+            /* 边框可以上下左右分开写 */
+            border-top: 10px dotted black;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        网页布局过程：
+            1.先准备好相关的网页元素，网页元素基本都是盒子box
+            2.利用css设置好盒子样式，然后摆放到相应位置（浮动，定位最难）
+            3.往盒子里面装内容
+            核心本质：利用css摆盒子
+        盒子模型：
+            包括：边框，外边距，内边距 和 实际内容
+        边框（border）：
+            边框有三部分组成：边框宽度（粗细） 边框样式 边框颜色
+            语法：
+                border: border-width || border-style || border-color
+             border-width：定义边框粗细，单位是px
+             border-style：边框的样式
+             border-color：边框颜色
+    -->
+    <div></div>
+</body>
+</html>
