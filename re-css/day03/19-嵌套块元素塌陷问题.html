@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+            margin-top: 50px;
+            /*border: 1px solid transparent;*/
+            /*padding: 1px;*/
+            overflow: hidden;
+        }
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        对于两个嵌套的块元素，父元素有上边距同时子元素也有上边距，此时父元素会塌陷较大值的外边距
+        解决方案：
+            1.可以为父元素定义上边框
+            2.可以为父元素定义上内边距
+            3.可以为父元素添加overflow:hidden
+            还有其他方法，比如浮动，固定，绝对定位的盒子不会有塌陷的问题，后面再总结。
+    -->
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

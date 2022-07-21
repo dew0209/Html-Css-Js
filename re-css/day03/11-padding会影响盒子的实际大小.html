@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            /*width: 200px;*/
+            width: 175px;
+            height: 160px;
+            /*height: 200px;*/
+            background-color: pink;
+            padding: 5px 10px 20px 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        盒子的实际大小是225 * 240
+        当我们给盒子指定padding值之后，发生了2件事：
+        1.内容和边框有了距离，添加了内边距
+        2.padding影响了盒子的实际大小
+        也就是说，如果盒子已经有了宽度和高度，此时再指定内边框，会撑大盒子
+        解决方案：
+            如果保证盒子和效果图大小保持一致，则让width/height减去多出来的内边距大小即可
+    -->
+    <div>盒子的内容是content盒子的内容是content</div>
+</body>
+</html>

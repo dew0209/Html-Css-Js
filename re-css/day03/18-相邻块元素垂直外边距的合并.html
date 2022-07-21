@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .one {
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            margin-bottom: 20px;
+        }
+        .two {
+            height: 200px;
+            width: 200px;
+            background-color: skyblue;
+            margin-top: 90px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        当上下相邻两个块元素（兄弟关系）相遇时，如果上面的元素有下边距margin-bottom，
+        下面的元素有上边距margin-top，则他们之间的垂直距离不是margin-bottom + margin-top
+        而是取两个值中间的较大值。被称为相邻元素垂直外边距的合并问题
+        解决方案：
+            尽量只给一个盒子添加margin值
+    -->
+    <div class="one">1</div>
+    <div class="two">2</div>
+</body>
+</html>

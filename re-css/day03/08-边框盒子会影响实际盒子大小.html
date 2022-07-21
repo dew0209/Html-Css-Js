@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 盒子实际大小会变成220 * 220 */
+            border: 10px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        边框会额外增加盒子的实际大小，因此我们有两种解决方案
+        解决方案：
+            1.测量盒子大小的时候，不量边框
+            2.如果测量的时候包含了边框，则需要width/height减去边框的宽度
+    -->
+    <div></div>
+</body>
+</html>

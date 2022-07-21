@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        span {
+            background-color: pink;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        网页元素很多都带有默认的内外边距，而且不同的浏览器默认的也不一致。因此我们在布局前，首先要清除下网页元素的内外边距
+        * {
+            margin: 0;
+            padding 0;
+        }
+        注意：行内元素为了照顾兼容性，尽量只设置左右内外边距，不要设置上下内外边距。但是转换为块级元素和行内块元素就可以了
+    -->
+    <ul>
+        <li>abcd</li>
+    </ul>
+    <span>行内元素尽量只设置左右的内外边距</span>
+</body>
+</html>
