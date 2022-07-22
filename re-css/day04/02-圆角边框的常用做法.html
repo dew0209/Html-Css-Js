@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .yuanxing {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 分别为高度和宽度的一半 */
+            border-radius: 50%;
+        }
+        .juxing {
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 50px;
+        }
+        .radius {
+            width: 200px;
+            height: 200px;
+            /* 左上 顺时针 简写同padding和margin的思路 */
+            border-radius: 10px 20px 30px 40px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        1.参数值可以为数值或者百分比的形式
+        2.如果是正方形，想要设置为一个圆，把数值修改为宽度的一半即可，或者直接写50%
+        3.如果是个矩形，设置为高度的一半就可以做
+        4.该属性是一个简写属性，可以跟四个值，分别代表左上角，右上角，右下角，左下角
+        5.分开写 border-top-left-radius: 左上 border-top-right-radius：右上 border-bottom-right-radius：右下  border-bottom-left-radius：左下
+    -->
+    1.圆形的做法
+    <div class="yuanxing"></div>
+    2.矩形的做法
+    <div class="juxing"></div>
+    3.可以设置不同的圆角
+    <div class="radius"></div>
+</body>
+</html>

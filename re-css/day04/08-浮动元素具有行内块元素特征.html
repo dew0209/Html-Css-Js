@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span,div {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        /* 如果块级盒子没有设置宽度，默认宽度和父级一样宽，但是添加浮动后，它的大小根据内容来决定，行内元素同理 */
+        p {
+            float: right;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <span></span>
+    <span></span>
+    <div></div>
+    <p>1234</p>
+</body>
+</html>

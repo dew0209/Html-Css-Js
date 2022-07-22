@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 150px;
+            height: 200px;
+            background-color: pink;
+            /* 可以实现显示一行，但是之间会有较大的空白间隙，不好控制 */
+            /*display: inline-block;*/
+        }
+    </style>
+</head>
+<body>
+    <!--
+        普通流（标准流）：就是标签按照规定好默认方式排列
+            1.块级元素会独占一行，从上向下顺序排列
+            2.行内元素会按照顺序，从左到右顺序排列，碰到父元素边缘自动换行
+        浮动：
+        定位：
+
+        有很多的布局效果，标准流没有办法完成，此时就可以利用浮动完成布局，因为浮动可以改变元素标签的默认排列方式
+        网页布局第一准测：
+            多个块级元素纵向排列找标准流，多个块级元素横向排列找浮动
+    -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</body>
+</html>
