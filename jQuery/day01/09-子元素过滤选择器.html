@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div, span, p {
+            width: 140px;
+            height: 140px;
+            margin: 5px;
+            background: #aaa;
+            border: #000 1px solid;
+            float: left;
+            font-size: 17px;
+            font-family: Verdana;
+        }
+
+        div.mini {
+            width: 55px;
+            height: 55px;
+            background-color: #aaa;
+            font-size: 12px;
+        }
+
+        div.hide {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn1").click(function () {
+                $("div.one :nth-child(2)").css("background","#ffbbaa");
+            });
+            $("#btn2").click(function () {
+                $("div.one :first-child").css("background","#ffbbaa");
+            });
+            $("#btn3").click(function () {
+                $("div.one :last-child").css("background","#ffbbaa");
+            });
+            $("#btn4").click(function () {
+                $("div.one :only-child").css("background","#ffbbaa");
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--
+        子元素过滤选择器
+            :nth-child(index/even/odd/equation) 选取每个父元素下的第index个子元素或者奇偶元素（index从1开始）
+            :first-child    选取每个父元素的第一个元素
+            :last-child     选取每个父元素的最后一个元素
+            :only-child     如果某个元素是它父元素中唯一的子元素，那么将被匹配
+    -->
+    <input type="button" value="选取每个class为one的div父元素下的第2个子元素." id="btn1"/>
+    <input type="button" value="选取每个class为one的div父元素下的第一个子元素." id="btn2"/>
+    <input type="button" value="选取每个class为one的div父元素下的最后一个子元素." id="btn3"/>
+    <input type="button" value="如果class为one的div父元素下的仅仅只有一个子元素，那么选中这个子元素." id="btn4"/>
+
+    <br><br>
+    <div class="one" id="one">
+        id 为 one,class 为 one 的div
+        <div class="mini">class为mini</div>
+    </div>
+    <div class="one" id="two" title="test">
+        id为two,class为one,title为test的div
+        <div class="mini" title="other">class为mini,title为other</div>
+        <div class="mini" title="test">class为mini,title为test</div>
+    </div>
+    <div class="one">
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini"></div>
+    </div>
+    <div class="one">
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini" title="tesst">class为mini,title为tesst</div>
+    </div>
+    <div style="display:none;" class="none">style的display为"none"的div</div>
+    <div class="hide">class为"hide"的div</div>
+    <div>
+        包含input的type为"hidden"的div<input type="hidden" value="123456789" size="8">
+    </div>
+    <div id="mover">正在执行动画的div元素.</div>
+</body>
+</html>

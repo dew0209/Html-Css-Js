@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn1").click(function () {
+                alert($(":text:enabled").val());
+                $(":text:enabled").val("尚硅谷");
+            });
+            $("#btn2").click(function () {
+                $(":text:disabled").val("www.atguigu.com");
+            });
+            $("#btn3").click(function () {
+                var num = $(":checkbox[name='newsletter']:checked").length;
+                alert(num);
+            });
+            $("#btn4").click(function () {
+                $(":checkbox[name='newsletter']:checked").each(function () {
+                    alert(this.value);
+                });
+            });
+            $("#btn5").click(function () {
+                $("select :selected").each(function () {
+                    alert(this.value);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--
+        表单对象属性过滤选择器
+        :enabled    选取所有可用元素
+        :disabled   选取所有不可用元素
+        :checked    选取所有被选中的元素（单选框，复选框）
+        :selected   选取所有被选中选项元素（下拉列表）
+        表单选择器
+        :input 选择input textarea select button元素
+        :text
+        :password
+        :radio
+        :checkbox
+        :submit
+        :image
+        :reset
+        :button
+        :file
+        :hidden
+    -->
+    <h3>表单对象属性过滤选择器</h3>
+    <button id="btn1">对表单内 可用input 赋值操作.</button>
+    <button id="btn2">对表单内 不可用input 赋值操作.</button><br /><br />
+    <button id="btn3">获取多选框选中的个数.</button>
+    <button id="btn4">获取多选框选中的内容.</button><br /><br />
+    <button id="btn5">获取下拉框选中的内容.</button><br /><br />
+
+    <form id="form1" action="#">
+        可用元素: <input name="add" value="可用文本框1"/><br>
+        不可用元素: <input name="email" disabled="true" value="不可用文本框"/><br>
+        可用元素: <input name="che" value="可用文本框2"/><br>
+        不可用元素: <input name="name" disabled="true" value="不可用文本框"/><br>
+        <br>
+
+        多选框: <br>
+        <input type="checkbox" name="newsletter" checked="checked" value="test1" />test1
+        <input type="checkbox" name="newsletter" value="test2" />test2
+        <input type="checkbox" name="newsletter" value="test3" />test3
+        <input type="checkbox" name="newsletter" checked="checked" value="test4" />test4
+        <input type="checkbox" name="newsletter" value="test5" />test5
+
+        <br><br>
+        下拉列表1: <br>
+        <select name="test" multiple="multiple" style="height: 100px">
+            <option>浙江</option>
+            <option selected="selected">辽宁</option>
+            <option>北京</option>
+            <option selected="selected">天津</option>
+            <option>广州</option>
+            <option>湖北</option>
+        </select>
+
+        <br><br>
+        下拉列表2: <br>
+        <select name="test2">
+            <option>浙江</option>
+            <option>辽宁</option>
+            <option selected="selected">北京</option>
+            <option>天津</option>
+            <option>广州</option>
+            <option>湖北</option>
+        </select>
+
+        <textarea rows="" cols=""></textarea>
+    </form>
+</body>
+</html>
