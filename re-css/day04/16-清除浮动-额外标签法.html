@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 父盒子不方便给高度，由于浮动元素不再占有原文档流的位置，所以它会对后面的元素排版产生影响 */
+        .box {
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+        .damao {
+            float: left;
+            width: 300px;
+            height: 300px;
+            background-color: purple;
+        }
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .footer {
+            height: 200px;
+            background-color: black;
+        }
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        清除浮动：
+            clear:属性值
+                left：不允许左侧有浮动元素
+                right：不允许右侧有浮动元素
+                both：清除左右两侧浮动元素的影响 （工作中常用）
+        额外标签法：就是在最后一个浮动的子元素后面添加一个额外标签，添加清除浮动样式
+            要求这个新的空标签必须是块级元素或者换行
+
+    -->
+    <div class="box">
+        <div class="damao">二毛</div>
+        <div class="ermao">大毛</div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>

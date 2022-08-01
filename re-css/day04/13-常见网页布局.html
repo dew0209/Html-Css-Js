@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .top {
+            height: 50px;
+            background-color: gray;
+        }
+        .banner {
+            width: 980px;
+            height: 150px;
+            background-color: gray;
+            margin: 10px auto;
+        }
+        .box {
+            width: 980px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+        li {
+            list-style: none;
+        }
+        .box li {
+            float: left;
+            width: 237px;
+            height: 300px;
+            background-color: gray;
+
+        }
+        .box li:not(:last-child) {
+            margin-right: 10px;
+        }
+        .footer {
+            height: 200px;
+            background-color: gray;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        注意点：
+            1.先用标准流的父元素排列上下位置，之后内部子元素采取浮动排列左右位置
+            2.一个盒子里面有多个子盒子，如果其中一个盒子浮动了，那么其他兄弟也应该浮动，以防止引起问题
+            3.浮动的盒子只会影响浮动盒子后面的标准流，不会影响前面的标准流
+    -->
+    <div class="top"></div>
+    <div class="banner"></div>
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>
