@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        固定定位同理
+        加了绝对定位的盒子不能通过margin:0 auto水平居中，但是可以通过以下计算方法实现水平和垂直居中
+            left: 50%;让盒子的左侧移动到父级元素的水平中心位置
+            margin-left: -100px;让盒子向左移动自身宽度的一半
+    -->
+    <div class="box"></div>
+</body>
+</html>

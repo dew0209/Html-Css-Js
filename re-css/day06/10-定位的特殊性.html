@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span {
+            position: absolute;
+            top: 300px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        div {
+            position: absolute;
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        绝对定位和固定定位也和浮动类似
+            1.行内元素添加绝对或者固定定位，可以直接设置高度和宽度
+            2.块级元素添加绝对或者固定定位，如果不给宽度或者高度，默认大小是内容的大小
+            3.脱标的盒子是不会触发外边距塌陷问题
+    -->
+    <span>123</span>
+    <div>abcd</div>
+</body>
+</html>
