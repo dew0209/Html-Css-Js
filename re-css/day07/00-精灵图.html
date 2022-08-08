@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1 {
+            width: 60px;
+            height: 60px;
+            background-color: pink;
+            margin: 100px auto;
+            background: url("images/sprites.png") no-repeat -182px 0;
+        }
+        .box2 {
+            width: 27px;
+            height: 25px;
+            margin: 200px;
+            background: url("images/sprites.png") no-repeat -155px -106px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        一个网页中往往会应用很多小的背景图像作为修饰，当网页中的图像过多时，服务器就会频繁地接收和发送请求图片，造成服务器请求压力过大，这将大大降低页面的加载速度
+        因此，为了有效地减少服务器接收和发送请求的次数，提高页面的加载速度，出现了css精灵技术
+        核心原理：将网页中的一些小背景图像融合到一张大图中，这样服务器只需要一次请求就可以了
+        核心：
+            1.精灵技术主要是针对背景图片的使用，就是把多个小背景图片整合到一张大图片中
+            2.这个大图片也称为精灵图
+            3.移动背景图片位置，此时可以使用background-position
+            4.移动的距离就是这个目标图片的x和y坐标，注意网页中的坐标有所不同
+            5.因为一般情况下都是往上往左移动，所以都是负值
+    -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
