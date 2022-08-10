@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            border: 2px solid red;
+        }
+        div img{
+            height: 200px;
+            /* 解决方案一 不要基线对齐就行了 */
+            /*vertical-align: bottom;*/
+            /* 解决方案二 转为块级元素 */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 底部空白间隙的问题 来源：图片和文字基线对齐 -->
+    <div>
+        <img src="images/cf5.jpg" alt="">
+    </div>
+</body>
+</html>
