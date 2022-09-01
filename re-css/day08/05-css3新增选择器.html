@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* input 且具有value属性 */
+        input[value] {
+            color: pink;
+        }
+        /* input 且具有 type属性并且 type="text" 属性 */
+        input[type="text"] {
+            color: pink;
+        }
+        /* div 具有class属性并且class属性以icon开头 */
+        div[class^="icon"] {
+            color: pink;
+        }
+        /* section有class属性并且class以data结尾 */
+        section[class$="data"]{
+            color: blue;
+        }
+        div.icon1 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        属性选择器 权重为10  类选择器，属性选择器，伪类选择器权重为10
+            E[attr]
+            E[attr="val"]
+            E[attr^="val"]
+            E[attr$="val"]
+            E[attr*="val"]
+    -->
+    <!--<input type="text" value="请输入用户名">
+    <input type="text">-->
+    <input type="text">
+    <input type="password">
+    <br>
+    <div class="icon1">小图标1</div>
+    <div class="icon2">小图标2</div>
+    <div class="icon3">小图标3</div>
+    <div class="icon4">小图标4</div>
+    <section class="a-data">a</section>
+    <section class="b-data">b</section>
+    <section class="c-data">c</section>
+    <section class="d-data">d</section>
+    <section class="d-data-1">1</section>
+</body>
+</html>

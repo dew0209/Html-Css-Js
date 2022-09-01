@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 伪元素清除浮动算是第一种额外标签法的一个升级和优化 */
+        .clearfix:before,.clearfix:after {
+            content: '';
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>

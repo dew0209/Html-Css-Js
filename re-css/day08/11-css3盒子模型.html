@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /*
+            css3可以用box-sizing来指定盒子模型，有两个值：即可指定为content-box，border-box。这样我们计算盒子大小的方式就发生了改变
+            content-box就是之前一样的情况，加padding会撑开盒子
+            border-box固定盒子的大小
+        */
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 20px solid red;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        小猪佩奇
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bar {
+            width: 150px;
+            height: 15px;
+            border: 1px solid red;
+            border-radius: 7px;
+        }
+        .bar_in {
+            width: 50%;
+            height: 15px;
+            background-color: red;
+            border-radius: 7px;
+            /* 谁做过渡给谁加 */
+            transition: width .5s ease-in-out .5s;
+        }
+        .bar:hover .bar_in {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="bar">
+        <div class="bar_in"></div>
+    </div>
+</body>
+</html>

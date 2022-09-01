@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 可以通过这种方式设置placeholder里面的字体 */
+        input::placeholder {
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        HTML5新增的表单属性
+            required = "required" 表单拥有该属性表示其内容不能为空
+            placeholder 表单的提示信息，存在默认值且不显示
+            autofocus   自动聚焦属性，页面加载完成时自动聚焦到指定表单
+            autocomplete off/on 当用户在开始字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项。默认已经打开.name属性需要存在
+            multiple = "multiple" 可以选择多选文件提交
+
+    -->
+    <form action="#">
+        <input type="search" required="required" placeholder="请搜索" autofocus autocomplete="on" name="keywords">
+        <input type="file" multiple>
+        <input type="submit">
+    </form>
+</body>
+</html>

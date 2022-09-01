@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*ul li:first-child {
+            color: blue;
+        }
+        ul li:last-child {
+            color: pink;
+        }
+        ul li:nth-child(5) {
+            color: red;
+        }*/
+        /*ul li:nth-child(even) {
+            background-color: #ccc;
+        }
+        ul li:nth-child(odd) {
+            background-color: pink;
+        }*/
+        /* 从0开始，每次加1，必须是n，不能是其他的字母 2n 偶数 2n+1奇数 5n 5的倍数 n+5 从5开始 -n+5 前5个 */
+        /*ul li:nth-child(n) {
+            background-color: pink;
+        }*/
+
+        /**
+         * nth-child和nth-of-type区别
+         *  nth-child在执行的时候先看nth-child(1)之后看前面的div
+         *  nth-of-type在执行的时候先看div之后再看后面的nth-of-type(1)
+         **/
+        section div:nth-child(1) {
+            background-color: red;
+        }
+        section div:nth-of-type(1) {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        结构伪类选择器主要根据文档结构来选择器元素，常用于根据父级选择器里面的子元素
+            E:first-child 匹配父元素中的第一个子元素E
+            E:last-child  匹配父元素中的最后一个E元素
+            E:nth-child(n)  匹配父元素中的第n个元素
+                n 可以是数字，关键字和公式
+                n 如果是数字，就是选择第n个元素，里面数字从1开始...
+                n 如果是关键字，even偶数，odd奇数
+            E:first-of-type 指定类型E的第一个
+            E:last-of-type  指定类型的最后一个
+            E:nth-of-type(n) 指定类型E的第n个
+    -->
+    <ul>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ul>
+    <!-- nth-child和nth-of-type区别 -->
+    <section>
+        <p>光头强</p>
+        <div>熊大</div>
+        <div>熊二</div>
+    </section>
+</body>
+</html>
