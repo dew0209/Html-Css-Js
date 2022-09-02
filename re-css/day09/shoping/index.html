@@ -23,6 +23,211 @@
             description 简要说明我们网站主要是做什么的
             keywords 页面关键词，是搜索引擎的关注点之一
     -->
-    123
+    <!-- 快捷导航模块 -->
+    <section class="shortcut">
+        <div class="w">
+            <div class="fl">
+                <ul>
+                    <li>品优购欢迎您！&nbsp;</li>
+                    <li>
+                        <a href="#">请登录&nbsp;</a>
+                        <a href="#" class="style_red">免费注册</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fr">
+                <ul>
+                    <li>我的订单</li>
+                    <li></li>
+                    <li class="arrow-icon">我的品优购</li>
+                    <li></li>
+                    <li>品优购会员</li>
+                    <li></li>
+                    <li>企业采购</li>
+                    <li></li>
+                    <li class="arrow-icon">关注品优购</li>
+                    <li></li>
+                    <li class="arrow-icon">客户服务</li>
+                    <li></li>
+                    <li class="arrow-icon">网站导航</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- header头部模块制作 -->
+    <header class="header w">
+        <!--
+            logo seo 优化
+                1.logo里面首先放一个h1标签，目的是为了提权，告诉搜索引擎，这个地方很重要
+                2.h1里面再放一个链接，可以返回首页的，把logo的背景图片给链接即可
+                3.为了让搜索引擎收录我们，我们链接里面要放文字（网站名称），但是文字不要显示出来
+                    a.text-indent移到盒子外面（text-indent:-9999px）,然后overflow:hidden。淘宝的做法
+                    b.直接给font-size:0;就看不到文字了。京东的做法
+                4.最后给链接一个title属性，这样鼠标放到logo上就可以看到文字提示了
+        -->
+        <!-- logo -->
+        <div class="logo">
+            <h1>
+                <a href="index.html" title="品优购商城">
+                    品优购商城
+                </a>
+            </h1>
+        </div>
+        <!-- 搜索 -->
+        <div class="search">
+            <input type="search" placeholder="语言开发">
+            <button>搜索</button>
+        </div>
+        <!-- hotwords模块制作 -->
+        <div class="hotwords">
+            <a href="#" class="style_red">优惠购首发</a>
+            <a href="#">亿元优惠</a>
+            <a href="#">9.9元团购</a>
+            <a href="#">每满99减30</a>
+            <a href="#">办公用品</a>
+            <a href="#">电脑</a>
+            <a href="#">通信</a>
+        </div>
+        <!-- 购物车模块 -->
+        <div class="shopcar">
+            我的购物车
+            <i class="count">80000000000</i>
+        </div>
+    </header>
+    <!-- nav模块制作 -->
+    <nav class="nav">
+        <div class="w">
+            <div class="dropdown">
+                <div class="dt">
+                    全部商品分类
+                </div>
+                <div class="dd">
+                    <ul>
+                        <li><a href="#">家用电器</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                        <li><a href="#">手机</a>、<a href="#">数码</a>、<a href="#">通信</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="navitems">
+                <ul>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                    <li><a href="#">服装城</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 底部模块制作 -->
+    <footer class="footer">
+        <div class="w">
+            <div class="mod_service">
+                <ul>
+                    <li>
+                        <h5></h5>
+                        <div class="service_txt">
+                            <h4>正品保障</h4>
+                            <p>正品保障，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5></h5>
+                        <div class="service_txt">
+                            <h4>正品保障</h4>
+                            <p>正品保障，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5></h5>
+                        <div class="service_txt">
+                            <h4>正品保障</h4>
+                            <p>正品保障，提供发票</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h5></h5>
+                        <div class="service_txt">
+                            <h4>正品保障</h4>
+                            <p>正品保障，提供发票</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="mod_help">
+                <dl>
+                    <dt>服务指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员介绍</a></dd>
+                    <dd><a href="#">生活旅行/团购</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>服务指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员介绍</a></dd>
+                    <dd><a href="#">生活旅行/团购</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>服务指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员介绍</a></dd>
+                    <dd><a href="#">生活旅行/团购</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>服务指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员介绍</a></dd>
+                    <dd><a href="#">生活旅行/团购</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>服务指南</dt>
+                    <dd><a href="#">购物流程</a></dd>
+                    <dd><a href="#">会员介绍</a></dd>
+                    <dd><a href="#">生活旅行/团购</a></dd>
+                    <dd><a href="#">常见问题</a></dd>
+                    <dd><a href="#">大家电</a></dd>
+                    <dd><a href="#">联系客服</a></dd>
+                </dl>
+                <dl>
+                    <dt>帮助中心</dt>
+                    <dd>
+                        <img src="images/wx_cz.jpg" alt="">
+                        品优购客户端
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
