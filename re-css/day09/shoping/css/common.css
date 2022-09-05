@@ -161,7 +161,6 @@
     font-size: 16px;
 }
 .dropdown .dd {
-    display: none;
     width: 210px;
     height: 465px;
     background-color: #c81623;
@@ -247,4 +246,18 @@
 .mod_help dl dt {
     font-size: 16px;
     margin-bottom: 10px;
+}
+/* 底部版权和联系模块 */
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+.links {
+    margin-bottom: 15px;
+}
+.copyright {
+    line-height: 20px;
+}
+.links a {
+    margin: 0 3px;
 }
