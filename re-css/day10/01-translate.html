@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+        div:first-child {
+            position: relative;
+            /* 可以接百分号，移动的距离是盒子自身的宽度或者高度来对比的 */
+            transform: translate(50%,50%);
+        }
+        div:last-child {
+            background-color: purple;
+        }
+        /* 盒子居中 */
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            transform: translate(-50%,-50%);
+        }
+        span {
+            /* 对于行内元素是无效的 */
+            transform: translate(300px,300px);
+        }
+    </style>
+</head>
+<body>
+    <!--
+        2D移动是2D转换里面的一种功能，可以改变元素在页面中的位置，类似定位
+        1.语法：
+            transform:translate(x,y);
+            transform:translateX(n);
+            transform:translateY(n);
+           重点：
+            1.定义2D转换中的移动，沿着x和y轴移动的元素
+            2.translate最大的优点：不会影响其他元素的位置
+            3.translate中的百分比单位是相对于自身元素的translate:(50%,50%);
+            4.对行内标签没有效果
+    -->
+    <div>
+        <p></p>
+    </div>
+    <div></div>
+    <span>123</span>
+</body>
+</html>

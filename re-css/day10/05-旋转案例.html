@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        div::after {
+            display: block;
+            content: '黑马';
+            line-height: 200px;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            background-color: hotpink;
+            transform: rotate(180deg);
+            transform-origin: left bottom;
+            transition: all 1s;
+        }
+        div:hover::after {
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
