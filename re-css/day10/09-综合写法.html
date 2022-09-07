@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all 2s;
+        }
+        div:hover {
+            /* 交换顺序，效果改变，先旋转坐标轴方向改变了 */
+            transform: translate(150px,150px) rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <!--
+        复合写法注意：
+            1.同时使用多个转换，其格式为：transform:translate() rotate() scale() ... 等
+            2.其顺序会影响转换的效果（先旋转会改变坐标轴方向）
+            3.当我们同时有位移和其他属性时，记得位移放到最前面
+        2D转换小结：
+            1.转换transform我们简单理解就是变形，有2D和3D之分
+            2.我们暂且学了三个分别是位移，旋转和缩放
+            3.2D移动translate(x,y) 最大的优势就是不影响其他盒子，里面参数用%，是相对于自身宽度和高度来计算的
+            4.可以分开写比如translateX(n)和translateY(n)
+            5.2D旋转rotate(度数)可以实现元素，单位是deg
+            6.2D缩放scale(x,y)，里面参数是数字，不跟单位，可以是小数，最大的优势，不影响其他盒子
+            7.设置转换中心点transform-origin:x y;参数可以百分比，像素或者方位名词
+            8.当我们进行综合写法时，同时有位移和其他属性的时候，记得要将位移放到最前面
+    -->
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            /* 设置缩放中心点 */
+            transform-origin: left top;
+        }
+        div:hover {
+            transform: scale(2,2);
+        }
+    </style>
+</head>
+<body>
+    <!--
+        缩放：顾名思义，只要给元素添加上了这个属性就能控制它放大还是缩小
+        语法：
+            transform:scale(x,y);
+        注意：
+            1.注意其中的x和y用逗号隔开
+            2.transform:scale(1,1);宽和高都放大一倍，相对于没有放大
+            3.transform:scale(2,2);宽和高都放大了2倍
+            4.transform:scale(2);只写一个参数，第二个参数则和第一个参数一样，相当于scale(2,2);
+            5.transform:scale(0.5,0.5);缩小
+            6.scale缩放最大的优势：可以设置转换中心点缩放，默认中心点缩放，不影响其他盒子(和使用width。height进行缩放的区别)
+    -->
+    <div></div>
+</body>
+</html>

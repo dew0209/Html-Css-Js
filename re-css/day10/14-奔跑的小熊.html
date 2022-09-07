@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #ccc;
+        }
+        div {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background: url("images/bear.png");
+            /* 可以添加多个动画，逗号分割 */
+            animation: bear 1s steps(8) infinite;
+        }
+        @keyframes bear {
+            0% {
+                background-position: 0,0;
+            }
+            0% {
+                background-position: -1600px,0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

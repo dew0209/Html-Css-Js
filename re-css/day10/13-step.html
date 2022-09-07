@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 0;
+            height: 30px;
+            overflow: hidden;
+            font-size: 20px;
+            white-space: nowrap;
+            background-color: pink;
+            /* steps(n) 就是分几步来完成我们的动画 */
+            animation: w 4s steps(10) forwards;
+        }
+        @keyframes w {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--
+
+    -->
+    <div>
+        世纪佳缘我在这里等你
+    </div>
+</body>
+</html>

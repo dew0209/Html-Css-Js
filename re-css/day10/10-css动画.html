@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 我们想页面一打开，一个盒子就从左边走到右边 */
+        /* 1.定义动画 */
+        @keyframes leftToRight {
+            /* 开始状态 */
+            0% {
+                transform: translateX(0px);
+            }
+            /* 结束状态 */
+            100% {
+                transform: translateX(1200px);
+            }
+        }
+        @keyframes move {
+            from {
+                transform: translate(0,0);
+            }
+            to {
+                transform: translate(1000px,0);
+            }
+        }
+        @keyframes moveNew {
+            0% {
+                transform: translate(0,0);
+            }
+            25% {
+                transform: translate(1000px,0);
+            }
+            50% {
+                transform: translate(1000px,500px);
+            }
+            75% {
+                transform: translate(0,500px);
+            }
+            100% {
+                transform: translate(0,0);
+            }
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 2.调用动画 */
+            animation-name: moveNew;
+            /* 3.持续时间 */
+            animation-duration: 10s;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        animation：动画是css3中具有颠覆性的特征之一，可通过设置多个节点来精确控制一个或一组动画，常用来实现复杂的动画效果
+        相比较过渡，动画可以实现更多变化，更多控制，连续自动播放等效果
+        制作动画分为两步：
+            1.先定义动画
+            2.再使用（调用）动画
+         动画序列：
+            1.0%是动画的开始，100%是动画的完成，这样的规则就是动画序列
+            2.在@keyframes中规定某项css样式，就能创建由当前样式逐渐改为新样式的动画效果
+            3.动画是使元素从一种样式逐渐变化为另一种样式的效果。您可以改变任意多的样式任意多的次数
+            4.请用百分比来规定变化发生的时间，或用关键字from和to，等同于 0% 和 100%
+    -->
+    <div></div>
+</body>
+</html>
