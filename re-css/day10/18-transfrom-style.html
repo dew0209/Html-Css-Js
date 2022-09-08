@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+        .box {
+            position: relative;
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            transition: all 2s;
+        }
+        .box:hover {
+            transform: rotateY(80deg);
+        }
+        .box div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+        }
+        .box div:last-child {
+            background-color: purple;
+            transform: rotateX(60deg);
+        }
+    </style>
+</head>
+<body>
+    <!--
+        transform-style:
+            1.控制子元素是否开启三维立体环境
+            2.transform-style: preserve-3d;子元素开启立体空间
+            3.transform-style: flat;子元素不开启3d立体空间，默认的
+            4.代码写给父级，但是影响的是子盒子
+            5.这个属性很重要，后面必用
+     -->
+    <div class="box">
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

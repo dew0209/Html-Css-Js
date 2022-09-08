@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+            /* translateZ(100px) 向外移动100px 需要借助透视 */
+            /*transform: translateX(100px) translateY(100px) translateZ(100px);*/
+            transform: translate3d(100px,100px,100px);
+
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        3D移动就是在2D移动的基础上多加了一个可以移动的方向，就是z轴方向
+            translateX()
+            translateY()
+            translateZ()    translateZ一般使用px单位
+            translate3d(x,y,z)
+        perspective:透视
+            在2D平面产生近大远小视觉立体，但是只是效果二维的
+            1.如果想要在网页产生3D效果需要透视（理解3D物体投影在2D平面内）
+            2.模拟人类的视觉位置，可认为安排一只眼睛去看
+            3.透视我们也称为视距：视距就是人的眼睛到屏幕的距离
+            4.距离视觉点越近的在电脑平面成像越大，越远成像越小
+            5.透视的单位是像素
+            注意：
+                透视写在被观察元素的父盒子上面
+    -->
+    <div></div>
+</body>
+</html>

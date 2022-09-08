@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            perspective: 200px;
+        }
+        img {
+            display: block;
+            width: 200px;
+            margin: 100px auto;
+            transition: all .2s;
+        }
+        img:hover {
+            /* 合成的矢量为轴 */
+            transform: rotate3d(1,1,0,45deg);
+        }
+    </style>
+</head>
+<body>
+    <!--
+        3D旋转指可以让元素在三维平面内沿着x轴，y轴，z轴或者自定义轴进行旋转
+        rotateX(45deg);沿着x轴旋转45度
+        rotateY(45deg);沿着y轴旋转45度
+        rotateZ(45deg);沿着z轴旋转45度
+        rotate3d(x,y,z,deg);沿着自定义轴旋转deg角度
+    -->
+    <img src="images/cf5.jpg" alt="">
+</body>
+</html>
