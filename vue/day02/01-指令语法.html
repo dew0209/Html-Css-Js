@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+
+    <div id="root">
+        <h1>指令语法：标签属性</h1>
+        <a :href="url">点我去尚硅谷学习1</a>
+        <a v-bind:href="school.url.toUpperCase()" v-bind:x="school.hello">点我去尚硅谷学习2</a>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false;
+        new Vue({
+            el:'#root',
+            data:{
+                name:'jack',
+                url: 'http://www.baidu.com',
+                /* 多级结构 */
+                school: {
+                    url:'http://www.atguigu.com',
+                    hello:"嘿嘿"
+                }
+            }
+        });
+    </script>
+</body>
+</html>

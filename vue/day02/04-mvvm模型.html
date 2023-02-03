@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+    <!--
+        mvvm：
+            m：模型model：对应data中的数据
+            v：视图view：模板
+            vm：视图模型viewModel：vue实例对象
+        特点：
+            1.data中所有的属性，最后都出现在了vm身上
+            2.vm身上所有属性，及vm原型上所有属性，在vue模板中都可以直接使用
+     -->
+    <div id="root">
+        <h1>学校名称，{{name}}</h1>
+        <h1>学校地址，{{address}}</h1>
+        <h1>测试一下1，{{1+1}}</h1>
+        <h1>测试一下2，{{$options}}</h1>
+        <h1>测试一下3，{{$emit}}</h1>
+        <h1>测试一下4，{{_c}}</h1>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false;
+        const vm = new Vue({
+            el:"#root",
+            data(){
+                return {
+                    name:"尚硅谷",
+                    address:'北京',
+                    a:1
+                }
+            }
+        });
+    </script>
+</body>
+</html>

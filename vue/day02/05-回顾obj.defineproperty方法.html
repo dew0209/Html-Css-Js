@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let number = 18;
+        let person = {
+            name:'张三',
+            sex:'男'
+        }
+        Object.defineProperty(person,'age',{
+            //value:20,
+            //enumerable:true, //控制属性是否可以被枚举，默认值是false
+            //writable:true, //控制属性可以被修改，默认值是false
+            configurable:true, //控制属性是否可以被删除，默认是false
+            //当有人读取person属性时，get函数（getter）就被会调用，且返回值就是age的值
+            get:function () {
+                return number;//number变化，person里面的age动态变化
+            },
+            //当有人修改person属性时，set函数（setter）就会被调用，且会收到修改的具体值
+            set:function (value) {
+                console.log('有人修改了age的值，且值是' + value);
+                number = value;
+            }
+        })
+        console.log(person.age);
+        console.log(Object.keys(person));
+        for(let key in person){
+            console.log(person[key]);
+        }
+    </script>
+</body>
+</html>
