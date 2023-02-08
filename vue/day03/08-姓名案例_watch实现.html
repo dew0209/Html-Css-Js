@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+    <!--
+        computed和watch之间的区别：
+            1.computed能完成的功能，watch都能完成
+            2.watch能完成的功能，computed不一定能完成。例如：watch可以进行异步操作
+        两个重要的小原则：
+            1.所被vue管理的函数，最好写成普通函数，这样this的指向才是vm或者组件实例对象
+            2.所有不被vue所管理的对象（定时器的回调，ajax的回调函数等），最好携程箭头函数，这样this的指向才是vm或者组件实例对象
+    -->
+    <div id="root">
+        姓：<input type="text" v-model="firstName"> <br>
+        名：<input type="text" v-model="lastName"> <br>
+        姓名：<span>{{fullName}}</span> <br>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false;
+        const vm = new Vue({
+            el:"#root",
+            data:{
+                firstName:"张",
+                lastName:"三",
+                fullName:'张-三'
+            },
+            computed:{
+
+            },
+            watch:{
+                firstName(newValue,oldValue){
+                    setTimeout(()=>{
+                        console.log(this);//vue对象
+                        this.fullName = newValue + '-' + this.lastName;
+                    },1000);
+                },
+                lastName(newValue,oldValue){
+                    this.fullName = this.firstName + '-' + newValue;
+                },
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+    <!--
+        深度监视：
+            vue中的watch默认不监测对象内部值的改变（一层）
+            配置deep:true可以监视对象内部值的改变（多层）
+        备注：
+            vue自身可以检测对象内部值的改变，但vue提供的watch默认不可变
+            使用watch时根据数据的具体结构，决定是否采用深度监视
+    -->
+    <div id="root">
+        <h2>今天天气很{{info}}</h2>
+        <button @click="changeStatus()">切换天气</button>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false;
+        const vm = new Vue({
+            el:"#root",
+            data:{
+                isHot:true,
+            },
+            // watch:{
+            //     // isHot:{
+            //     //     handler(newValue,oldValue){
+            //     //         console.log('isHot被修改了',newValue,oldValue);
+            //     //     }
+            //     // }
+            //     //简写
+            //     // isHot(newValue,oldValue){
+            //     //     console.log('isHot被修改了',newValue,oldValue);
+            //     // }
+            // },
+            computed:{
+                info(){
+                    return this.isHot ? "炎热" : "凉爽";
+                }
+            },
+            methods:{
+                changeStatus(){
+                    this.isHot = !this.isHot;
+                }
+            }
+        });
+        vm.$watch('isHot',function (newValue,oldValue) {
+            console.log('isHot被修改了',newValue,oldValue);
+        };
+    </script>
+</body>
+</html>
