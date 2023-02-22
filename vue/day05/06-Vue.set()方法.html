@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h1>学校信息</h1>
+        <h2>学校名称：{{name}}</h2>
+        <h2>学校地址：{{address}}</h2>
+        <!-- 第一个参数不允许是vm或者vm._data -->
+        <h2>校长是：{{leader}}</h2>
+        <hr>
+        <h1>学生信息</h1>
+        <button @click="addSex">添加一个性别属性，默认值是男</button>
+        <h2>学生姓名：{{student.name}}</h2>
+        <h2 v-if="student.sex">学生性别：{{student.sex}}</h2>
+        <h2>学生年龄：真实{{student.age.rAge}}，学校年龄：对外{{student.age.sAge}}</h2>
+        <h2>朋友们：</h2>
+        <ul>
+            <li v-for="(f,index) in friends" :key="index">
+                {{f.name}}--{{f.age}}
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false;
+        const vm = new Vue({
+            el:'#root',
+            data:{
+                name:'尚硅谷',
+                address:'北京',
+                student:{
+                    name:'tom',
+                    age:{
+                        rAge:40,
+                        sAge:29
+                    }
+                },
+                friends:[
+                    {name:'张三',age:20},
+                    {name:'李四',age:30}
+                ]
+            },
+            methods:{
+                addSex(){
+                    //第一个参数不允许是vm或者vm._data
+                    //Vue.set(this.student,'sex','男');
+                    this.$set(vm._data.student,'sex','女')
+                }
+            }
+        });
+        //Vue.set(vm.student,'sex','男');//动态添加  vm.$set(vm._data.student,'sex','男')也行
+
+    </script>
+</body>
+</html>
