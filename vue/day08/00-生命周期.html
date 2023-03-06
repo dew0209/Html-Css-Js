@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h2 :style="{opacity:opacity}">欢迎学习Vue</h2>
+        <!-- 会重复解析，直接执行change方法无数次，无数个定时器，爆炸 -->
+        <!--{{change()}}-->
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false;
+        const vm = new Vue({
+            el:"#root",
+            data:{
+                opacity:1
+            },
+            methods:{
+                /*change(){
+                    console.log("方法里面用定时器");
+                    setInterval(()=>{
+                        vm.opacity -= 0.02;
+                        if(vm.opacity <= 0)vm.opacity = 1;
+                    },16);
+                }*/
+            },
+            //Vue完成模板的解析并把初始的真实Dom元素放入页面后调用mounted
+            mounted(){
+                console.log("挂载！",this);//vm
+                setInterval(()=>{
+                    vm.opacity -= 0.02;
+                    if(vm.opacity <= 0)vm.opacity = 1;
+                },16);
+            }
+        });
+        //不推荐
+        // setInterval(()=>{
+        //     vm.opacity -= 0.02;
+        //     if(vm.opacity <= 0)vm.opacity = 1;
+        // },16);
+    </script>
+</body>
+</html>

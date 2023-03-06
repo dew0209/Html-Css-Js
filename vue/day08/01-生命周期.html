@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+<div id="root">
+    <h2>当前的n值是：{{n}}</h2>
+    <button @click="add">点我n+1</button>
+</div>
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+    const vm = new Vue({
+        el:"#root",
+        data:{
+            n:1
+        },
+        methods:{
+            add(){
+                this.n++;
+            }
+        },
+        /* 此时，无法通过vm访问到data中的数据，methods中的方法 */
+        beforeCreate(){
+            console.log('beforeCreate',this);
+        },
+        create(){
+            console.log('beforeCreate',this);
+        },
+
+        /* 此时：页面呈现的是未经Vue编译的dom结构，所有对dom的操作，最终都不奏效 */
+        beforeMount(){
+            console.log('beforeMount',this);
+        },
+        /* 此时，可以通过vm访问到data中的数据，methdos中的方法。页面中呈现的是经过vue编译的dom。对dom的操作均有效，至此初始化过程结束，一般在此进行，开启定时器，发送网络请求，订阅消息，绑定自定义事件等初始化操作 */
+        mounted(){
+            console.log("挂载！",this.$el instanceof HTMLElement);//true
+        },
+
+        /* 更新流程 */
+        /* beforeUpdate 此时，数据是最新的，但页面是旧的，即：页面尚未和数据保持同步 */
+        beforeUpdate(){
+            console.log("beforeUpdate--",this);
+        },
+        /* updated 此时，数据是最新的，页面也是最新的，即：页面和数据保持同步 */
+        updated(){
+            console.log("updated--",this);
+        }
+    });
+</script>
+</body>
+</html>
